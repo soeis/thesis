@@ -1,6 +1,6 @@
- 
+
 %     jbuaa.cls
-%     
+%
 %     version 0.1  (2017年8月)
 %
 %     北航学报自然科学版LaTeX模板（非官方）
@@ -10,8 +10,8 @@
 %
 %     These macros may be freely transmitted, reproduced, or modified
 %     provided that this notice is left intact.
- 
- 
+
+
  % 参考了《控制理论与应用》提供的LATEX模板  http://jcta.alljournals.ac.cn/uploadfile/cta_cn/20170419/kzllyy%20template20170419-2.9.zip
  % BHOSC   BUAAthesis  https://github.com/BHOSC/BUAAthesis/
  % 北航学报 http://bhxb.buaa.edu.cn/UserFiles/File/%E5%8C%97%E8%88%AA%E5%AD%A6%E6%8A%A5%E6%A8%A1%E6%9D%BF17.1.16(1).doc
@@ -59,7 +59,7 @@ The LaTeX template for Journal of BUAA]
 
 % \usepackage{bigstrut}
 %     \setlength\bigstrutjot{3pt}
-    
+
 %\def\citedash{$\sim$} % for creating cites like [3,4],[7~10]
 %\renewcommand{\theequation}{\thesection.\arabic{equation}}(公式按节编号)
 
@@ -76,10 +76,10 @@ The LaTeX template for Journal of BUAA]
 \newcommand{\hei}{\CJKfamily{hei}}
 \newcommand{\kai}{\CJKfamily{kai}}
 \newcommand{\fang}{\CJKfamily{fang}}
-  
+
 \newfontfamily\CalibriFont{Calibri}
 \newfontfamily\TimesNMFont{Times New Roman}
-  
+
 \newcommand{\erhao}{\fontsize{22pt}{\baselineskip}\selectfont}      % 字号设置
 \newcommand{\sihao}{\fontsize{14pt}{\baselineskip}\selectfont}      % 字号设置
 \newcommand{\xiaosihao}{\fontsize{12pt}{\baselineskip}\selectfont}  % 字号设置
@@ -107,7 +107,7 @@ The LaTeX template for Journal of BUAA]
 \usepackage{lettrine}
 \setlength{\parindent}{2em}
 \setlength{\voffset}{-4mm}
-\setlength{\parskip}{1pt} 
+\setlength{\parskip}{1pt}
 % \setlength{\arraycolsep}{1pt}
 \renewcommand{\baselinestretch}{1.11} %定义行间距1.15
 \setcounter{page}{1} \makeatletter
@@ -124,8 +124,8 @@ The LaTeX template for Journal of BUAA]
                                    {1pt}%
                                    {\normalfont\bfseries\kai\wuhao}}
  \renewcommand{\CJKglue}{\hskip -0.4pt plus 5.5\baselineskip}
- 
- 
+
+
 %% 节编号字体为\normalfont，取消黑体
 \makeatletter  % see, e.g., p. 26 of "The LaTeX Companion"
   \def\@seccntformat#1{\@ifundefined{#1@cntformat}%
@@ -148,7 +148,7 @@ The LaTeX template for Journal of BUAA]
   }
   \def\subsubsection@cntformat{\normalfont{\thesubsubsection}\quad}
 \makeatother
- 
+
  \usepackage{geometry}
  \newgeometry{
     top=25.4mm, bottom=22.5mm, left=20mm, right=20mm,
@@ -158,7 +158,7 @@ The LaTeX template for Journal of BUAA]
 \loadgeometry{mastergeometry}
 
 \setlength{\columnsep}{14mm}
- 
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \setlength{\parskip}{1pt} \allowdisplaybreaks \makeatother
 \newtheoremstyle{mystyle}{3pt}{3pt}{}{\parindent}{\bfseries}{}{5mm}{}
@@ -210,8 +210,8 @@ The LaTeX template for Journal of BUAA]
 \newlength{\somelength}
 \settowidth{\somelength}{中图分类号}
 
-{\hei\wuhao \makebox[\widthof{中图分类号}][s]{摘 要}:}  %% 摘要 和  中图分类号 等宽设置  \quad  或者 \hphantom{键词} \phantom{键词} 或者 \makebox 
-{\fang\wuhao 
+{\hei\wuhao \makebox[\widthof{中图分类号}][s]{摘 要}:}  %% 摘要 和  中图分类号 等宽设置  \quad  或者 \hphantom{键词} \phantom{键词} 或者 \makebox
+{\fang\wuhao
 \BODY
 }
 
@@ -258,7 +258,7 @@ The LaTeX template for Journal of BUAA]
 } \makeatother
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\renewcommand{\citedash}{-}  
+\renewcommand{\citedash}{-}
 \newcommand{\citeBUAA}[1]{%
  \!\textsuperscript{\cite{#1}}%
 }
@@ -269,8 +269,8 @@ The LaTeX template for Journal of BUAA]
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \fancypagestyle{plain}{ \fancyhf{}\vspace{10pt}
 \lhead{}
-\chead{\vspace{0.6cm}\centering{{\CJKfamily{hei}\xiaowuhao 北\ 京\ 航\ 空\ 航\ 天\ 大\ 学\ 学\ 报}\\[-0.5ex]
-{{\xiaowuhao Journal of Beijing University of Aeronautics and Astronautics}}}}
+\chead{\vspace{0.6cm}\centering{{\CJKfamily{hei}\xiaowuhao 北\ 京\ 邮\ 电\ 大\ 学}\\[-0.5ex]
+{{\xiaowuhao Beijing University of Posts and Telecommunications}}}}
 \rhead{}
 \lfoot{}
 \cfoot{}
@@ -281,13 +281,12 @@ The LaTeX template for Journal of BUAA]
 %\renewcommand{\footrulewidth}{0.4pt}
 %\setlength{\hoffset}{0.1pt}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\pagestyle{fancy} 
+\pagestyle{fancy}
 \fancyhf{}
-% \fancyhead[RE]{{\footnotesize 第~xx~卷~~~}} 
-\fancyhead[CE]{{\footnotesize 北京航空航天大学学报}}
+% \fancyhead[RE]{{\footnotesize 第~xx~卷~~~}}
+\fancyhead[CE]{{\footnotesize 北京航空航天大学}}
 \fancyhead[LE,RO]{~~~\footnotesize\thepage ~~~}
 % \fancyhead[LO]{{\footnotesize ~~~第~x~期}}
 \lfoot{}
 \cfoot{}
 \rfoot{}
-
