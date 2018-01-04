@@ -1,16 +1,16 @@
 # Fdb version 3
-["bibtex main"] 1515058852 "main.aux" "main.bbl" "main" 1515058879
+["bibtex main"] 1515060145 "main.aux" "main.bbl" "main" 1515060169
   "./main.bib" 1515055464 459 e324758b6dc37c1338ee1dbb3827e7ad ""
   "d:/texlive/2017/texmf-dist/bibtex/bst/base/unsrt.bst" 1514173019 18030 1376b4b231b50c66211e47e42eda2875 ""
-  "main.aux" 1515058875 2826 a1f92795120845ae5e0c6ad570881956 ""
+  "main.aux" 1515060167 2826 9b86a44b27e341dd382da969d42270a1 ""
   (generated)
-  "main.blg"
   "main.bbl"
-["xdvipdfmx"] 1515058875 "main.xdv" "main.pdf" "main" 1515058879
-  "main.xdv" 1515058875 142304 093239f2e4e99e957e0c2567533b760c "xelatex"
+  "main.blg"
+["xdvipdfmx"] 1515060167 "main.xdv" "main.pdf" "main" 1515060170
+  "main.xdv" 1515060167 145672 8722554aa00af340a7bf3eada193ec75 "xelatex"
   (generated)
   "main.pdf"
-["xelatex"] 1515058853 "main.tex" "main.xdv" "main" 1515058879
+["xelatex"] 1515060145 "main.tex" "main.xdv" "main" 1515060169
   "c:/Windows/Fonts/msyh.ttc" 1506692488 19647736 ff2e53a6131130a07589812ea5b5b0d0 ""
   "cite.sty" 1515032461 14458 101124fed797c2f4dc820c6da37d156a ""
   "d:/texlive/2017/texmf-dist/fonts/map/fontname/texfonts.map" 1514186000 3332 103109f5612ad95229751940c61aada0 ""
@@ -227,9 +227,9 @@
   "image/tu1.png" 1515032461 86620 d31e1f7a0a343a54150bfcb1a2c9cc5a ""
   "image/tu2.png" 1515032461 419223 085abcdd6c22cde782dec832f21a86cf ""
   "jbuaa.cls" 1515054821 10614 fb36c1883e21b63f2c27f2b3701a437a ""
-  "main.aux" 1515058875 2826 a1f92795120845ae5e0c6ad570881956 ""
-  "main.bbl" 1515058853 247 14111153bd8433b00a2f0d3b1fa08a8c "bibtex main"
-  "main.tex" 1515058870 28656 ed88a19074d22fc1adb9d0c5ad81b48d ""
+  "main.aux" 1515060167 2826 9b86a44b27e341dd382da969d42270a1 ""
+  "main.bbl" 1515060145 247 14111153bd8433b00a2f0d3b1fa08a8c "bibtex main"
+  "main.tex" 1515060070 29097 67f4d9d2254384141f25573ad07fecfd ""
   (generated)
   "main.aux"
   "main.log"

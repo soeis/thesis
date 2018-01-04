@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99998 (TeX Live 2017/W32TeX) (preloaded format=xelatex 2017.12.25)  4 JAN 2018 17:40
+This is XeTeX, Version 3.14159265-2.6-0.99998 (TeX Live 2017/W32TeX) (preloaded format=xelatex 2017.12.25)  4 JAN 2018 18:02
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -2304,60 +2304,51 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 LaTeX Font Warning: Font shape `TU/KaiTi(0)/bx/n' undefined
-(Font)              using `TU/KaiTi(0)/m/n' instead on input line 152.
+(Font)              using `TU/KaiTi(0)/m/n' instead on input line 158.
 
 
-Underfull \hbox (badness 3679) in paragraph at lines 158--162
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [2]
+Underfull \hbox (badness 3679) in paragraph at lines 164--168
 \TU/SimSun(0)/m/n/10.5 式 中\TU/TimesNewRoman(0)/m/n/10.5 :$\OML/cmm/m/it/10 n[]$ \TU/SimSun(0)/m/n/10.5 和 $\OML/cmm/m/it/10 ^^Z[]$ \TU/SimSun(0)/m/n/10.5 分 别 为 艇 囊 内 部 氦 气 的 物
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 158--162
+Underfull \hbox (badness 10000) in paragraph at lines 164--168
 \TU/SimSun(0)/m/n/10.5 质 的 量 和 氦 气 在 温 度 $\OML/cmm/m/it/10 T$ \TU/SimSun(0)/m/n/10.5 时 的 平 均 密 度；|
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 158--162
+Underfull \hbox (badness 10000) in paragraph at lines 164--168
 \OML/cmm/m/it/10 V$\TU/TimesNewRoman(0)/m/n/10.5 =[][]\TU/SimSun(0)/m/n/10.5 为 艇 囊 体 积；| $\OML/cmm/m/it/10 T$\TU/TimesNewRoman(0)/m/n/10.5 =[][]\TU/SimSun(0)/m/n/10.5 为
  []
-
-[2]
-Underfull \vbox (badness 10000) has occurred while \output is active []
 
 File: ./image/tu1.png Graphic file (type bmp)
 <./image/tu1.png>
 File: ./image/tu2.png Graphic file (type bmp)
 <./image/tu2.png>
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
 [3]
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-
-Overfull \hbox (3.89983pt too wide) in paragraph at lines 285--285
+Overfull \hbox (3.89983pt too wide) in paragraph at lines 291--291
  [] 
  []
 
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-
+[4]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [4]
+ (./main.bbl)
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- (./main.bbl) [5]
+ [5] [6
+
+]
 
 Package Fancyhdr Warning: \headheight is too small (28.45274pt): 
  Make it at least 44.0999pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[6
+[7
 
 
 
@@ -2373,10 +2364,10 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 Here is how much of TeX's memory you used:
  37353 strings out of 493010
  796434 string characters out of 6138023
- 790168 words of memory out of 5000000
+ 789168 words of memory out of 5000000
  40698 multiletter control sequences out of 15000+600000
  572332 words of font info for 257 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  63i,25n,70p,10413b,987s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on main.xdv (6 pages, 142304 bytes).
+Output written on main.xdv (7 pages, 145672 bytes).
