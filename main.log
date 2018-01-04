@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99998 (TeX Live 2017/W32TeX) (preloaded format=xelatex 2017.12.25)  4 JAN 2018 11:05
+This is XeTeX, Version 3.14159265-2.6-0.99998 (TeX Live 2017/W32TeX) (preloaded format=xelatex 2017.12.25)  4 JAN 2018 17:40
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -2244,14 +2244,6 @@ Underfull \hbox (badness 10000) detected at line 92
 LaTeX Font Warning: Font shape `U/wasy/m/n' in size <4.2> not available
 (Font)              size <5> substituted on input line 92.
 
-./main.tex:92: Missing $ inserted.
-<inserted text> 
-                $
-l.92 ]
-      
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
 LaTeX Font Info:    Calculating math sizes for size <7.875> on input line 92.
 
 LaTeX Font Warning: Font shape `U/wasy/m/n' in size <5.51247> not available
@@ -2261,40 +2253,26 @@ LaTeX Font Warning: Font shape `U/wasy/m/n' in size <5.51247> not available
 LaTeX Font Warning: Font shape `U/wasy/m/n' in size <3.9375> not available
 (Font)              size <5> substituted on input line 92.
 
-./main.tex:92: Missing { inserted.
-<to be read again> 
-                   _
-l.92 ]
-      
-A left brace was mandatory here, so I've put one in.
-You might want to delete and/or insert some corrections
-so that I will find a matching right brace soon.
-(If you're confused by all this, try typing `I}' now.)
-
-./main.tex:92: Missing $ inserted.
-<inserted text> 
-                $
-l.92 ]
-      
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-./main.tex:92: Missing } inserted.
-<inserted text> 
-                }
-l.92 ]
-      
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
 
 LaTeX Font Warning: Font shape `TU/SimHei(0)/bx/n' undefined
-(Font)              using `TU/SimHei(0)/m/n' instead on input line 109.
+(Font)              using `TU/SimHei(0)/m/n' instead on input line 107.
 
 
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+Package Fancyhdr Warning: \headheight is too small (28.45274pt): 
+ Make it at least 38.40944pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[1
+
+
+
+
+]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 \g__fontspec_family_KaiTi_int=\count359
@@ -2326,107 +2304,53 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 LaTeX Font Warning: Font shape `TU/KaiTi(0)/bx/n' undefined
-(Font)              using `TU/KaiTi(0)/m/n' instead on input line 124.
+(Font)              using `TU/KaiTi(0)/m/n' instead on input line 152.
 
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-
-Package Fancyhdr Warning: \headheight is too small (28.45274pt): 
- Make it at least 38.40944pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[1
-
-
-
-
-]
-Underfull \hbox (badness 3679) in paragraph at lines 130--134
+Underfull \hbox (badness 3679) in paragraph at lines 158--162
 \TU/SimSun(0)/m/n/10.5 式 中\TU/TimesNewRoman(0)/m/n/10.5 :$\OML/cmm/m/it/10 n[]$ \TU/SimSun(0)/m/n/10.5 和 $\OML/cmm/m/it/10 ^^Z[]$ \TU/SimSun(0)/m/n/10.5 分 别 为 艇 囊 内 部 氦 气 的 物
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 130--134
+Underfull \hbox (badness 10000) in paragraph at lines 158--162
 \TU/SimSun(0)/m/n/10.5 质 的 量 和 氦 气 在 温 度 $\OML/cmm/m/it/10 T$ \TU/SimSun(0)/m/n/10.5 时 的 平 均 密 度；|
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 130--134
+Underfull \hbox (badness 10000) in paragraph at lines 158--162
 \OML/cmm/m/it/10 V$\TU/TimesNewRoman(0)/m/n/10.5 =[][]\TU/SimSun(0)/m/n/10.5 为 艇 囊 体 积；| $\OML/cmm/m/it/10 T$\TU/TimesNewRoman(0)/m/n/10.5 =[][]\TU/SimSun(0)/m/n/10.5 为
  []
+
+[2]
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
 File: ./image/tu1.png Graphic file (type bmp)
 <./image/tu1.png>
 File: ./image/tu2.png Graphic file (type bmp)
 <./image/tu2.png>
-[2]
-Overfull \hbox (3.89983pt too wide) in paragraph at lines 257--257
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[3]
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+Overfull \hbox (3.89983pt too wide) in paragraph at lines 285--285
  [] 
  []
 
-[3]
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- (./main.bbl
-Underfull \hbox (badness 5388) in paragraph at lines 8--10
-[]\TU/TimesNewRoman(0)/m/n/7.875 YU W B,CHEN W C.Guidance scheme for glide range
- []
+ [4]
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 8--10
-\TU/TimesNewRoman(0)/m/n/7.875 maximization of a hypersonic vehicle,AIAA-2011-
- []
-
-[4]
-Underfull \hbox (badness 1661) in paragraph at lines 22--24
-[]\TU/TimesNewRoman(0)/m/n/7.875 ZARCHAN P.Tactical and strategic missile guidance[M].6th
- []
-
-
-Underfull \hbox (badness 4341) in paragraph at lines 30--32
-[]\TU/TimesNewRoman(0)/m/n/7.875 WEISS M.Adjoint method for missile performance analy-
- []
-
-
-Underfull \hbox (badness 1286) in paragraph at lines 30--32
-\TU/TimesNewRoman(0)/m/n/7.875 sis on state-space models[J].Journal of Guidance Control &
- []
-
-
-Underfull \hbox (badness 2318) in paragraph at lines 34--36
-\TU/TimesNewRoman(0)/m/n/7.875 sile guidance systems - SLAM[J].Journal of Guidance and
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 38--40
-[]\TU/TimesNewRoman(0)/m/n/7.875 WEISS M,BUCCO D.Handover analysis for tactical
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 38--40
-\TU/TimesNewRoman(0)/m/n/7.875 guided weapons using the adjoint method,AIAA-2005-
- []
-
-
-Underfull \hbox (badness 1019) in paragraph at lines 42--45
-\TU/TimesNewRoman(0)/m/n/7.875 LIN X H,CUI N G,LIU D.Research on adjoint system the-
- []
-
-) [5
-
-]
-Underfull \hbox (badness 10000) in paragraph at lines 441--441
-[]\TU/TimesNewRoman(0)/bx/n/10.5 Key words: \TU/TimesNewRoman(0)/m/n/10.5 keyword1; keyword2; keyword3; keyword4; keyword5 |\TU/SimSun(0)/m/n/10.5 （与 中 文 关 键 词 一 一 对
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 441--441
-\TU/SimSun(0)/m/n/10.5 应\TU/TimesNewRoman(0)/m/n/10.5 , \TU/SimSun(0)/m/n/10.5 关 键 词 请 尽 量 从 \TU/TimesNewRoman(0)/m/n/10.5 EI Controlled term \TU/SimSun(0)/m/n/10.5 中 选 择，|  以 提 高 \TU/TimesNewRoman(0)/m/n/10.5 EI \TU/SimSun(0)/m/n/10.5 检 索 的 命 中 率 及 被 引 频 次，|  网 址：|
- []
-
+ (./main.bbl) [5]
 
 Package Fancyhdr Warning: \headheight is too small (28.45274pt): 
  Make it at least 44.0999pt.
@@ -2447,12 +2371,12 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
  ) 
 Here is how much of TeX's memory you used:
- 37404 strings out of 493010
- 798959 string characters out of 6138023
- 789191 words of memory out of 5000000
- 40748 multiletter control sequences out of 15000+600000
- 572340 words of font info for 258 fonts, out of 8000000 for 9000
+ 37353 strings out of 493010
+ 796434 string characters out of 6138023
+ 790168 words of memory out of 5000000
+ 40698 multiletter control sequences out of 15000+600000
+ 572332 words of font info for 257 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  63i,25n,70p,10413b,987s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on main.xdv (6 pages, 138240 bytes).
+Output written on main.xdv (6 pages, 142304 bytes).

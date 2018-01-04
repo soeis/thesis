@@ -284,7 +284,7 @@ The LaTeX template for Journal of BUAA]
 \pagestyle{fancy}
 \fancyhf{}
 % \fancyhead[RE]{{\footnotesize 第~xx~卷~~~}}
-\fancyhead[CE]{{\footnotesize 北京航空航天大学}}
+\fancyhead[CE]{{\footnotesize 北京邮电大学}}
 \fancyhead[LE,RO]{~~~\footnotesize\thepage ~~~}
 % \fancyhead[LO]{{\footnotesize ~~~第~x~期}}
 \lfoot{}

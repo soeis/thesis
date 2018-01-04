@@ -45,12 +45,12 @@
 % 标题，基金项目，作者，通信地址定义
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \title{
- \vspace{1cm} \erhao\hei 迁移学习实现猫狗图像分类\vspace{-0.2cm}
+\vspace{1cm} \erhao\hei 迁移学习实现猫狗图像分类\vspace{-0.2cm}
 }
 
 \author{
- \sihao\fang 邓心一，姜百淳，刘姜旺\\[0.1cm]
- \liuhao (北京邮电大学~~信息与通信工程学院，北京~~100876)
+\sihao\fang 邓心一，姜百淳，刘姜旺\\[0.1cm]
+\liuhao (北京邮电大学~~信息与通信工程学院，北京~~100876)
 }
 
 \date{}  % 这一行用来去掉默认的日期显示
@@ -72,22 +72,22 @@
 
 \twocolumn[
  \begin{@twocolumnfalse}
-  \maketitle
-  \positiontextbox{2.2cm}{2.9cm}{\wuhao http://www.bupt.edu.cn \quad  email@bupt.edu.cn\\[0.3cm]
-   \wuhao DOI: \ 10.13700/j.bh.1001-5965.****.****}
-  \begin{CAbstractJBUAA}
-   不少于200字，应完整概括出文章的目的、方法、结果及结论；简洁，排除常识内容，避免重复题目；独立，不得引用文中参考文献号、图号和公式号；具体，尽量用具体数字来说明该项工作取得的进展或成效，例如某项性能指标提高了百分之多少，避免``效果很好"这类的含糊其辞；便于收录，摘要、题目中避免包含公式、上下标等，以方便EI等文摘和题录数据库收录文本数据。高质量的摘要有利于文摘被国际权威数据库收录，及引起同行的重视。用第3人称，建议采用``对……进行了研究"、``报告了……现状"、``进行了……调查"等记述方法，不必使用``本文"、``作者"等作为主语。缩写词应提供中文全称。
-  \end{CAbstractJBUAA}
-  %%%%%%%%首页角注
-  \positiontextbox{2.0cm}{25cm}{
-   \noindent\rule{4cm}{.5pt}\\[0.5ex]%
-   \hspace*{1em} \liuhao \linespread{0.8}\selectfont
-   \parbox{\textwidth}{%
-    \hei\makebox[\widthof{\makebox{*}收}][r]{收}稿日期: 2018-01-01； 录用日期： 2018-01-01\\%
-    \hei\makebox[\widthof{\makebox{*}收}][r]{网}络出版地址: 无\\
-    \hei\makebox[\widthof{\makebox{*}收}][r]{基}金项目：无\\
-    \hei\makebox[\widthof{\makebox{*}收}][r]{\makebox{*}通}信作者：E-mail：__@bupt.edu.cn
-   }}
+ \maketitle
+\positiontextbox{2.2cm}{2.9cm}{\wuhao http://www.bupt.edu.cn \quad  email@bupt.edu.cn\\[0.3cm]
+\wuhao DOI: \ 10.13700/j.bh.1001-5965.****.****}
+\begin{CAbstractJBUAA}
+不少于200字，应完整概括出文章的目的、方法、结果及结论；简洁，排除常识内容，避免重复题目；独立，不得引用文中参考文献号、图号和公式号；具体，尽量用具体数字来说明该项工作取得的进展或成效，例如某项性能指标提高了百分之多少，避免``效果很好"这类的含糊其辞；便于收录，摘要、题目中避免包含公式、上下标等，以方便EI等文摘和题录数据库收录文本数据。高质量的摘要有利于文摘被国际权威数据库收录，及引起同行的重视。用第3人称，建议采用``对……进行了研究"、``报告了……现状"、``进行了……调查"等记述方法，不必使用``本文"、``作者"等作为主语。缩写词应提供中文全称。
+\end{CAbstractJBUAA}
+%%%%%%%%首页角注
+\positiontextbox{2.0cm}{25cm}{
+\noindent\rule{4cm}{.5pt}\\[0.5ex]%
+\hspace*{1em} \liuhao \linespread{0.8}\selectfont
+\parbox{\textwidth}{%
+\hei\makebox[\widthof{\makebox{*}收}][r]{收}稿日期：2018-01-01； 录用日期：2018-01-01\\%
+\hei\makebox[\widthof{\makebox{*}收}][r]{网}络出版地址：（无）\\
+\hei\makebox[\widthof{\makebox{*}收}][r]{基}金项目：（无）\\
+\hei\makebox[\widthof{\makebox{*}收}][r]{通}信作者：E-mail：\_\_\_@bupt.edu.cn
+}}
  \end{@twocolumnfalse}
 ]
 
@@ -102,22 +102,50 @@
 %%%%%！！！！！正文在第一页两栏分别合适位置插入 \enlargethispage{-3.3cm}，给首页跨双栏脚注留空间，大小需要结合前面位置和高度手动设置！！！！！
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-《北京航空航天大学学报》严格执行科技出版的有关国家标准，如果作者返回的修改稿撰写不符合规范，特别是信息提供不完整，编辑部将联系作者要求答复、补正，这样常常费时费工也拖延文章出版。本文档简要介绍有关编辑出版规范和写作常识，请作者仔细阅读，认真执行，如有不明之处，欢迎来电咨询。您可以直接在本文档的基础上撰写稿件，使您撰写的文稿符合《北京航空航天大学学报》格式要求。\enlargethispage{-3.3cm}
+由于卷积神经网络在机器视觉任务中的优秀表现，Kaggle竞赛中与图像相关的题目，绝大多数参赛者采用的是深度学习的解决方案。本小组选择了经典的图像分类任务，在问题的解决过程中，熟悉了一般CNN网络模型的构建方式，尝试运用一些数据挖掘的技巧，提升模型的表现，最终模型分类的准确率令人满意，也在一定程度上减少了模型训练的代价。挖掘任务的详细解决过程陈述如下。
 
-文章篇幅不限。
-
-\section{引言的说明}
-引言不编排节号,不插图列表。引言应说明课题的背景，引述该领域的国内外同行已经取得的进展，突出本研究工作的选题意义和创新点\citeBUAA{Harpold1979Shuttle,Yu2011Guidance}。内容不应与摘要和结论雷同\citeBUAA{Hu2015Steady}。在论述本文的研究意义时，应注意分寸，切忌使用“有很高学术价值”、“填补了国内外空白”、“首次发现”等不适之词；同时也注意不要使用客套话，如“才疏学浅”、“水平有限”、“恳求指教”之类的语言\citeBUAA{Laning1956Random,Zarchan2013Tactical,Zadeh1963Linear}。
-
-\section{题目、作者和单位}
+\section{任务描述}
+\subsection{竞赛题目}
+竞赛题目选用Kaggle竞赛中，类型为Playground的Dogs vs. Cats Redux: Kernels Edition。题目提供已标注的训练集和未标注的测试集，要求参赛者提交测试集中每一张图片为狗的概率。提交的结果用公式(1)，即对数损失来衡量。
 \enlargethispage{-3.3cm}
-题目应简洁、准确，能恰如其分地概括研究的范围和深度，避免使用希腊字母和上下标。英文题名中第一个单词首字母大写，其余小写(专有名词首字母大写)\citeBUAA{Weiss2005Adjoint,Zarchan1979Complete,Weiss2005Handover}。
+\begin{equation}
+\label{eqnLabel}
+Loss=-\frac 1 n\sum_{n}^{i=1}[y_ilog(\hat y_i)+(1-y_i)log(1-\hat y_i)]
+\end{equation}
+式中，$n$是测试集的图片数量，$\hat y_i$是图片为狗的预测概率，图片实际为猫时，$y_i$取0，否则取1。对数损失越小，预测结果越好。
+\subsection{数据集}
+数据集分为训练集和测试集，jpg格式。训练集包括12500张猫的图片和12500张狗的图片，大小为543MB，分辨率不等，来自某个宠物领养的网站，推测为程序自动爬取获得，分类标签存在一定程度的错误。测试集包括12500张猫与狗的图片，大小为271MB，来源与训练集相同。
 
-作者署名及署名排序应协商一致。姓名的英译采用汉语拼音，姓前名后，姓全大写，名首字母大写。如：ZHANG Ying（张颖），WANG Xilian（王锡联），ZHUGE Hua（诸葛华）。
+\section{问题定义}
+赛题是一个典型的图像分类问题，即根据一定的分类规则将图像自动分到一组预定义类别中。图像分类在多领域有着广泛的实际应用。实际应用中，图像分类任务会受到视角的变化，大小的变化，物体的形变，遮挡，光照条件，背景干扰和多种子类型等各方面因素\citeBUAA{cs231n}的挑战。
+\enlargethispage{-3.3cm}
+对于传统的数据挖掘算法，如K近邻算法(K-Nearest Neighbor, KNN)，支持向量机(Support Vector Machine, SVM)，图像分类任务是非常复杂甚至难以胜任的。卷积神经网络，以其在图像识别方面的优异表现，从诞生起就备受瞩目。因此，本小组选择CNN作为图像分类算法的核心部分，再利用迁移学习的思想，减少计算量和过拟合的风险。最终将数据挖掘任务划分为以下三个子任务：（1）图像数据的预处理；（2）数据特征的提取；（3）特征处理，对提取出的特征进行分类。
 
-通讯作者一般为导师或课题负责人。
+\section{解决方案}
+经过多次实验和迭代，本小组最终提出了对图像仅进行简单预处理，以多个卷积神经网络作为特征提取器，训练深度前馈网络(Feedforward Neural Network, FNN)作为分类器，最后进行模型融合的解决方案。
+\subsection{方案提出}
+较深的卷积神经网络的训练和计算，需要相当大的计算能力。Google团队2016年提出的Xception模型，使用了60块Nvidia K80 GPUs，在ImageNet数据集上训练了3天\citeBUAA{Xception}，达到79\%的Top1准确率。小组最终采用的模型为Inception系列的三个深度均达到100层以上的CNN，而拥有的计算资源仅仅是笔记本上的入门级GPU GTX 1050m，这对计算资源提出了不小的挑战。
 
-单位应为论文首次投稿时的作者所在单位。单位的著录一般应到系一级，单位应著录全称，单位名称的英译应统一正确\citeBUAA{Lin1996ResearchAdjoint,Zou2001Adjoint}。
+此外，虽然相对于小组拥有的计算资源，题目所给训练集数据量较大，但是对于深度神经网络的训练，提供的数据又稍显不足，容易出现过拟合的情况。针对这些问题，在查阅相关资料后，决定采取迁移学习的方式解决。在深度学习的分类器之外，小组也采用了经典的SVM分类器与FNN作出对比。由于采用提取特征向量的方式，需要数据集相对固定，因此难以在短时间内尝试多种数据预处理方式。本小组把模型调整的重心放在网络的后半部分，节约出训练网络的时间来对模型做出优化。因此，形成了简单预处理→CNN提取特征向量→FNN作为分类器→模型融合的方案结构。
+
+以下将从CNN网络、迁移学习和模型融合三个方面来进行算法的介绍。
+
+\subsection{Inception系列网络}
+方案选取了在ImageNet数据集中，表现优秀的Inception系列网络，作为特征提取部分的模型。Inception系列网络是Google团队提出的一系列不断改进的CNN模型，名字来源于电影盗梦空间(Inception)中的一句台词：\"We need to go deeper\"。经典的CNN网络，由负责特征提取的卷积层和负责降采样的池化层交替堆叠而成。Inception系列网络在经典CNN结构的基础上，改进了卷积层的结构，取得了一定的性能提升。
+
+CNN中的卷积核大小，很大程度上影响着提取到的特征图像。一般来说，卷积核越大，感受野越大，越能发现全局的图像特征；卷积核越小，对图像局部的特征更加敏感。传统的CNN，每一层采用的是一组大小相同的卷积核。为了加强网络的泛化能力，对不同尺度的目标都能良好地识别，InceptionV1提出在同一层采用多种大小的卷积核，将卷积得到的特征向量进行拼接，作为下一层的输入。这就给下一层网络提供了不同尺度上的特征向量信息，使网络能够自由选择，提高了网络的泛化能力。
+
+多个卷积核带来了性能的提升，也带来了极大的计算量。为了减少网络的计算，InceptionV1提出了1×1的卷积核。1×1的卷积核并不会改变特征图像在空间上的相对关系，而是把同一空间位置上的多个通道融合在一起，通过减少输出特征图像的通道数量，达到减少计算量的目的。
+\subsection{迁移学习}
+迁移学习
+\subsection{模型融合}
+模型融合
+
+\section{数据处理}
+数据处理
+
+\section{结果分析}
+结果分析
 
 \section{正文}
 \subsection{量、单位、公式}
@@ -125,8 +153,8 @@
 \label{labSecForm}
 《北京航空航天大学学报》一般不编排单独的符号表，对于公式中的变量含义需要说明的，请在公式后的段落中，采用``式中：$A$为某某；$B$为某某；……"的方式加以说明。
 \begin{equation}
- \label{eqnLabelp}
- p_1 (h) = \dfrac{n_{\textnormal{He}}RT}{V}-\rho_{\textnormal{He}}gh
+\label{eqnLabelp}
+p_1 (h) = \dfrac{n_{\textnormal{He}}RT}{V}-\rho_{\textnormal{He}}gh
 \end{equation}
 式中:$n_{\textnormal{He}}$ 和 $\rho_{\textnormal{He}}$ 分别为艇囊内部氦气的物质的量和氦气在温度 $T$ 时的平均密度；
 $V$=\SI{36893.426}{\cubic\meter}%%数字会小一些，默认的是公式字体大小
@@ -164,38 +192,38 @@ $V$=\SI{36893.426}{\cubic\meter}%%数字会小一些，默认的是公式字体�
 
 图中文字均用中文或变量名称表示！
 \begin{figure}[b!]
- \centering
- \includegraphics [scale=1,trim=0 0 0 0]{./image/tu1.png}
- \bicaption[labelFigtu1]{图}{\centering 电磁力峰值随线圈-铝板蒙皮间距和铝板蒙皮厚度变化曲线}{Fig.}{\centering Curves of electromagnetic force peak changing with coil-aluminum-plate gap and thickness of aluminum plate}
+\centering
+\includegraphics [scale=1,trim=0 0 0 0]{./image/tu1.png}
+\bicaption[labelFigtu1]{图}{\centering 电磁力峰值随线圈-铝板蒙皮间距和铝板蒙皮厚度变化曲线}{Fig.}{\centering Curves of electromagnetic force peak changing with coil-aluminum-plate gap and thickness of aluminum plate}
 \end{figure}
 
 图片样例见图\ref{labelFigtu1}和图\ref{labelFigtu2}（目前是位图格式，不能编辑，作者应提供可编辑的矢量图）。
 
 \begin{figure}[h!]
- \centering
- \includegraphics [scale=1,trim=0 0 0 0]{./image/tu2.png}
- \bicaption[labelFigtu2]{图}{\centering 谐振腔输入光强波动对谐振曲线的影响}{Fig.}{\centering Fluctuation influence of the resonator's input intensity on resonance curve}
+\centering
+\includegraphics [scale=1,trim=0 0 0 0]{./image/tu2.png}
+\bicaption[labelFigtu2]{图}{\centering 谐振腔输入光强波动对谐振曲线的影响}{Fig.}{\centering Fluctuation influence of the resonator's input intensity on resonance curve}
 \end{figure}
 
 \subsubsection{表格}
 请使用三线表。选中表格，点右键打开``边框和底纹”，可对表格的边框等格式进行编辑，三线表的一般格式见表\ref{labelTabtab1}。
 \begin{table}[h]
- \centering
- \captionnamefont{\xiaowuhao\bf }
- \captiontitlefont{\xiaowuhao\bf }
- \bicaption[labelTabtab1]{表}{传输线积冰条件}{Table}{Icing conditions of transmission line}
- \renewcommand\tabcolsep{1em}
- % \xiaowuhao \selectfont
- % \renewcommand{\arraystretch}{0.8}
- % \fontsize{9}{11}\selectfont
- \begin{tabular}{cccc}
-  \toprule
-  {编号} & {直径}/\si{\metre} & {静温}/\si{\kelvin} & {时间}/min \\
-  \midrule
-  4      & 0.0349             & 268.15              & 30         \\
-  5      & 0.01905            & 268.15              & 30         \\
-  \bottomrule
- \end{tabular}
+\centering
+\captionnamefont{\xiaowuhao\bf }
+\captiontitlefont{\xiaowuhao\bf }
+\bicaption[labelTabtab1]{表}{传输线积冰条件}{Table}{Icing conditions of transmission line}
+\renewcommand\tabcolsep{1em}
+% \xiaowuhao \selectfont
+% \renewcommand{\arraystretch}{0.8}
+% \fontsize{9}{11}\selectfont
+\begin{tabular}{cccc}
+\toprule
+{编号} &  {直径}/\si{\metre} & {静温}/\si{\kelvin} & {时间}/min\\
+\midrule
+4 & 0.0349 & 268.15 & 30\\
+5 & 0.01905 & 268.15 & 30\\
+\bottomrule
+\end{tabular}
 \end{table}
 
 \subsubsection{计算、实验}
@@ -219,42 +247,42 @@ $V$=\SI{36893.426}{\cubic\meter}%%数字会小一些，默认的是公式字体�
 具体样例详见文后参考文献部分。
 
 \begin{table}[h!]
- \centering
- \captionnamefont{\xiaowuhao\bf }
- \captiontitlefont{\xiaowuhao\bf }
- \bicaption[labelTabtab2]{表}{文献类型和标志代码}{Table}{Referrence type and identification code}
- \liuhao
- \tabulinesep=1.2mm
- \begin{tabu} to 0.95\linewidth {X[c,m] X[1,c,m]|[1pt]X[1,c,m] X[1,c,m]}
-  \tabucline[1pt]{-}
-  {参考文献} & {文献类型} & {参考文献} & {文献类型} \\
-  {类型}     & {标识}     & {类型}     & {标识}     \\ \hline
-  专著       & M          & 学位论文   & D          \\
-  会议录     & C          & 报告       & R          \\
-  期刊       & J          & 标准       & S          \\
-  报纸       & N          & 专利       & P          \\
-  汇编       & G          & 档案       & A          \\
-  计算机程序 & CP         & 电子公告   & EB         \\
-  数据库     & DB         & 美图       & CM         \\
-  数据集     & DS         & 其他       & Z          \\ \tabucline[1pt]{-}
- \end{tabu}
+\centering
+\captionnamefont{\xiaowuhao\bf }
+\captiontitlefont{\xiaowuhao\bf }
+\bicaption[labelTabtab2]{表}{文献类型和标志代码}{Table}{Referrence type and identification code}
+\liuhao
+\tabulinesep=1.2mm
+\begin{tabu} to 0.95\linewidth {X[c,m] X[1,c,m]|[1pt]X[1,c,m] X[1,c,m]}
+\tabucline[1pt]{-}
+{参考文献} &  {文献类型} & {参考文献} &  {文献类型} \\
+{类型} &  {标识} & {类型} &  {标识}\\ \hline
+   专著     &  M  & 学位论文  & D     \\
+   会议录    &  C  &  报告   &   R   \\
+   期刊     &  J  & 标准    &   S   \\
+   报纸     &  N  & 专利    &   P   \\
+   汇编     &  G  & 档案    &   A   \\
+   计算机程序 & CP  &电子公告  &   EB    \\
+   数据库    & DB &美图      &  CM   \\
+   数据集    & DS &其他      &    Z  \\ \tabucline[1pt]{-}
+\end{tabu}
 \end{table}
 
 \begin{table}[h!]
- \centering
- \captionnamefont{\xiaowuhao\bf }
- \captiontitlefont{\xiaowuhao\bf }
- \bicaption[labelTabtab3]{表}{电子文献载体和标志代码}{Table}{Electronic literature and identification code}
- %\renewcommand\tabcolsep{2pt}
- \liuhao
- \tabulinesep=1.2mm
- \begin{tabu} to 0.98\linewidth {X[c,m] X[1,c,m] X[1,c,m] X[1.35,c,m] X[1.2,c,m]}
-  \tabucline[1pt]{-}
-  \makecell{载体 \\ 类型} &  \makecell{磁带\\ （magnetic\\ tape）} & \makecell{磁盘\\ （disk）} & \makecell{光盘\\ （CD-ROM）} & \makecell{联机网络\\ （online）}\\
-  \hline
-  \makecell{标志 \\ 代码} & MT & DK & CD & OL\\
-  \tabucline[1pt]{-}
- \end{tabu}
+\centering
+\captionnamefont{\xiaowuhao\bf }
+\captiontitlefont{\xiaowuhao\bf }
+\bicaption[labelTabtab3]{表}{电子文献载体和标志代码}{Table}{Electronic literature and identification code}
+%\renewcommand\tabcolsep{2pt}
+\liuhao
+\tabulinesep=1.2mm
+\begin{tabu} to 0.98\linewidth {X[c,m] X[1,c,m] X[1,c,m] X[1.35,c,m] X[1.2,c,m]}
+\tabucline[1pt]{-}
+\makecell{载体\\ 类型} &  \makecell{磁带\\ （magnetic\\ tape）} & \makecell{磁盘\\ （disk）} & \makecell{光盘\\ （CD-ROM）} & \makecell{联机网络\\ （online）}\\
+\hline
+\makecell{标志\\ 代码} & MT & DK & CD & OL\\
+\tabucline[1pt]{-}
+\end{tabu}
 \end{table}
 
 \section{其他有关事项说明}
@@ -310,7 +338,7 @@ $V$=\SI{36893.426}{\cubic\meter}%%数字会小一些，默认的是公式字体�
 \vspace{1em}
 {\hei\wuhao 致谢\quad}
 {\fang\wuhao
- 感谢某某……注意：首页注明基金项目后，文末不必再致谢。
+感谢某某……注意：首页注明基金项目后，文末不必再致谢。
 }
 
 
@@ -330,10 +358,10 @@ $V$=\SI{36893.426}{\cubic\meter}%%数字会小一些，默认的是公式字体�
 }
 
 {
- \renewcommand{\baselinestretch}{0.9}
- \liuhao
- \bibliographystyle{unsrt}
- \bibliography{./TempExample}
+\renewcommand{\baselinestretch}{0.9}
+\liuhao
+\bibliographystyle{unsrt}
+\bibliography{./main}
 }
 
 
@@ -342,16 +370,16 @@ $V$=\SI{36893.426}{\cubic\meter}%%数字会小一些，默认的是公式字体�
 % 作者简历
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 {
- \xiaowuhao
- \noindent {\hei 作者简介:}
+\xiaowuhao
+\noindent {\hei 作者简介:}
 
- \noindent {\hei 姓名}~~~ 性别，学历，职称。主要研究方向：xxxxxxxxxx。
- \vskip 16pt
+\noindent {\hei 姓名}~~~ 性别，学历，职称。主要研究方向：xxxxxxxxxx。
+\vskip 16pt
 
- \noindent {\hei 张某某}~~~ 男，博士研究生。主要研究方向：xxxxxxxxxx。
- \vskip 16pt
+\noindent {\hei 张某某}~~~ 男，博士研究生。主要研究方向：xxxxxxxxxx。
+\vskip 16pt
 
- \noindent {\hei 李某某}~~~ 男，博士，教授，博士生导师。主要研究方向：xxxxxxxxxx。
+\noindent {\hei 李某某}~~~ 男，博士，教授，博士生导师。主要研究方向：xxxxxxxxxx。
 }
 
 %%%%%！！！！！需要在合适位置插入\newpage，来平衡最后一页两栏！！！！！
@@ -382,60 +410,58 @@ $V$=\SI{36893.426}{\cubic\meter}%%数字会小一些，默认的是公式字体�
 \pagestyle{fancy}
 \fancyhf{}
 \lhead{}
-\chead{\vspace{0.8cm}\centering{{\CJKfamily{hei}\xiaowuhao 北\ 京\ 航\ 空\ 航\ 天\ 大\ 学\ 学\ 报}\\[-0.5ex]
-{{\xiaowuhao Journal of Beijing University of Aeronautics and Astronautics}}}}
+\chead{\vspace{0.8cm}\centering{{\CJKfamily{hei}\xiaowuhao 北\ 京\ 邮\ 电\ 大\ 学}\\[-0.5ex]
+{{\xiaowuhao Beijing University of Posts and Telecommunications}}}}
 \rhead{}
 \lfoot{}
 \cfoot{}
 \rfoot{}
 \renewcommand{\headrule}{%
- \hrule height0.4pt width \headwidth \vskip1.0pt%
- \hrule height0.4pt width \headwidth \vskip-2pt}
+\hrule height0.4pt width \headwidth \vskip1.0pt%
+\hrule height0.4pt width \headwidth \vskip-2pt}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %          英文摘要
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \twocolumn[
  \begin{@twocolumnfalse}\vspace*{0.3cm}
-  \begin{center}
-   \parbox{\textwidth}{
-    \setlength{\parindent}{1em}
-    {
-     \centering\sihao\textbf{Title title title title title title} \xiaowuhao\fang （不超过10个实词,不出现非公知公用的缩写词）\\
-    } \vspace{-1.2mm}
-    \begin{center}
-     {\wuhao ZHANG Moumou\makebox{$^{\text{1,2}}$}, LI Mou\makebox{$^{\text{1,2,*}}$}, SHANGGUAN Moumou\makebox{$^{\text{2,3}}$}, LIN Mou\makebox{$^{\text{3}}$}, ZHAO Mou\makebox{$^{\text{3}}$}, WANG Mou\makebox{$^{\text{3}}$}}\\[-0.1cm]
-     \liuhao{(1. School of Aeronautic Science and Engineering, Beijing University of Aeronautics and Astronautics, Beijing 100191, China;\\
-      2. School of Astronautics, Beijing University of Aeronautics and Astronautics, Beijing 100191, China;\\
-      3. College of Automation, Northwestern Polytechnical University, Xi’an 710072, China)}
-    \end{center}
+\begin{center}
+\parbox{\textwidth}{
+\setlength{\parindent}{1em}
+{
+\centering\sihao\textbf{Transfer Learning for Image Classification of Cats and Dogs}\\
+} \vspace{-1.2mm}
+\begin{center}
+{\wuhao DENG Xinyi, JIANG Baichun, LIU Jiangwang}\\[-0.1cm]
+\liuhao{(School of Information and Communication Engineering, Beijing University of Posts and Telecommunications, Beijing 100876, China)}
+\end{center}
 
-    \vspace{-10pt}\wuhao
-    {
-     \textbf{Abstract:}
-     (与中文摘要内容对应，英文摘要字数150\textasciitilde 200个单词)英文摘要应和中文摘要对应，并请导师
-     或专业人士把关，保证摘要质量，高质量的摘要有利于文摘被国际权威数据库收录，及引起同行的重视。
-     如果英文摘要比中文摘要更详细，应另提供一份英文摘要的中文副本，以便于本刊英文编辑检查英文。
-     首次出现英文缩写时应注意写明全称。
+\vspace{-10pt}\wuhao
+{
+\textbf{Abstract:}
+(与中文摘要内容对应，英文摘要字数150\textasciitilde 200个单词)英文摘要应和中文摘要对应，并请导师
+或专业人士把关，保证摘要质量，高质量的摘要有利于文摘被国际权威数据库收录，及引起同行的重视。
+如果英文摘要比中文摘要更详细，应另提供一份英文摘要的中文副本，以便于本刊英文编辑检查英文。
+首次出现英文缩写时应注意写明全称。
 
-     英文摘要的撰写规范请参考本刊网站“下载园地”中的《Ei文摘要求》。
+英文摘要的撰写规范请参考本刊网站“下载园地”中的《Ei文摘要求》。
 
-     \textbf{Key words:} transfer learning; keyword2; keyword3; keyword4; keyword5
-    }
-   }
-  \end{center}
+\textbf{Key words:} transfer learning; image classification; convolutional neural network; model ensembling
+}
+}
+\end{center}
 
-  %%%%%！！！！！英文脚注！！！！！
-  \positiontextbox{2.0cm}{16cm}{
-   \noindent\rule{4cm}{.5pt}\\[0.5ex]%
-   \hspace*{1em} \xiaowuhao \linespread{0.8}\selectfont
-   \parbox{\textwidth}{%
-    \CalibriFont
-    \hei\makebox[\widthof{\makebox{*}\textbf{R}}][r]{\textbf{R}}\textbf{eceived:} 2018-01-01; \textbf{Accepted:} 2018-01-01\\%
-    \hei\makebox[\widthof{\makebox{*}\textbf{U}}][r]{\textbf{U}}\textbf{RL:} \\
-    \hei\makebox[\widthof{\makebox{*}\textbf{F}}][r]{\textbf{F}}\textbf{oundation item:} None\\
-    \hei\makebox[\widthof{\makebox{*}\textbf{C}}][r]{\makebox{*}\textbf{C}}\textbf{orresponding author.} E-mail: ___@bupt.edu.cn
-   }}
+%%%%%！！！！！英文脚注！！！！！
+\positiontextbox{2.0cm}{16cm}{
+\noindent\rule{4cm}{.5pt}\\[0.5ex]%
+\hspace*{1em} \xiaowuhao \linespread{0.8}\selectfont
+\parbox{\textwidth}{%
+\CalibriFont
+\hei\makebox[\widthof{\makebox{*}\textbf{R}}][r]{\textbf{R}}\textbf{eceived:} 2018-01-01; \textbf{Accepted:} 2018-01-01\\%
+\hei\makebox[\widthof{\makebox{*}\textbf{U}}][r]{\textbf{U}}\textbf{RL:} (None)\\
+\hei\makebox[\widthof{\makebox{*}\textbf{F}}][r]{\textbf{F}}\textbf{oundation item:} (None)\\
+\hei\makebox[\widthof{\makebox{*}\textbf{C}}][r]{\textbf{C}}\textbf{orresponding author.} Tel.: 010-8231xxxx ~~ E-mail: \_\_\_@bupt.edu.cn
+}}
  \end{@twocolumnfalse}
 ]
 

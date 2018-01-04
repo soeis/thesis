@@ -1,16 +1,16 @@
 # Fdb version 3
-["bibtex main"] 1515035154 "main.aux" "main.bbl" "main" 1515035180
-  "./TempExample.bib" 1515032461 7496 d00f3d5906a165070247376b932e2a80 ""
+["bibtex main"] 1515058852 "main.aux" "main.bbl" "main" 1515058879
+  "./main.bib" 1515055464 459 e324758b6dc37c1338ee1dbb3827e7ad ""
   "d:/texlive/2017/texmf-dist/bibtex/bst/base/unsrt.bst" 1514173019 18030 1376b4b231b50c66211e47e42eda2875 ""
-  "main.aux" 1515035177 2623 8637d3682e9e5300b8fad7e50131cf75 ""
+  "main.aux" 1515058875 2826 a1f92795120845ae5e0c6ad570881956 ""
   (generated)
   "main.blg"
   "main.bbl"
-["xdvipdfmx"] 1515035178 "main.xdv" "main.pdf" "main" 1515035180
-  "main.xdv" 1515035177 138240 de8a0b5af664eadf03c0df8c0679724c "xelatex"
+["xdvipdfmx"] 1515058875 "main.xdv" "main.pdf" "main" 1515058879
+  "main.xdv" 1515058875 142304 093239f2e4e99e957e0c2567533b760c "xelatex"
   (generated)
   "main.pdf"
-["xelatex"] 1515035155 "main.tex" "main.xdv" "main" 1515035180
+["xelatex"] 1515058853 "main.tex" "main.xdv" "main" 1515058879
   "c:/Windows/Fonts/msyh.ttc" 1506692488 19647736 ff2e53a6131130a07589812ea5b5b0d0 ""
   "cite.sty" 1515032461 14458 101124fed797c2f4dc820c6da37d156a ""
   "d:/texlive/2017/texmf-dist/fonts/map/fontname/texfonts.map" 1514186000 3332 103109f5612ad95229751940c61aada0 ""
@@ -226,11 +226,11 @@
   "d:/texlive/2017/texmf-var/web2c/xetex/xelatex.fmt" 1514188599 3704706 aeade6ae9a6b3c4ba385239b53b0012f ""
   "image/tu1.png" 1515032461 86620 d31e1f7a0a343a54150bfcb1a2c9cc5a ""
   "image/tu2.png" 1515032461 419223 085abcdd6c22cde782dec832f21a86cf ""
-  "jbuaa.cls" 1515034507 10620 0d4b3784fa6f94203ffc5f16d238aa7f ""
-  "main.aux" 1515035177 2623 8637d3682e9e5300b8fad7e50131cf75 ""
-  "main.bbl" 1515035154 2141 8c8da656e2f19f64501c229422fde82e "bibtex main"
-  "main.tex" 1515035121 26130 db746a415ed3fa755965a2d046584cd3 ""
+  "jbuaa.cls" 1515054821 10614 fb36c1883e21b63f2c27f2b3701a437a ""
+  "main.aux" 1515058875 2826 a1f92795120845ae5e0c6ad570881956 ""
+  "main.bbl" 1515058853 247 14111153bd8433b00a2f0d3b1fa08a8c "bibtex main"
+  "main.tex" 1515058870 28656 ed88a19074d22fc1adb9d0c5ad81b48d ""
   (generated)
-  "main.log"
   "main.aux"
+  "main.log"
   "main.xdv"
