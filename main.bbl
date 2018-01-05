@@ -7,4 +7,9 @@ http://cs231n.github.io/classification/.
 Chollet F. Xception: Deep Learning with Depthwise Separable Convolutions[J].
   arXiv preprint arXiv:1610.02357, 2016.
 
+\bibitem{SVMorFNN}
+Yang, Shaomei, and Qian Zhu. "Research on comparison and application of SVM and
+  FNN Algorithm." Wireless Communications, Networking and Mobile Computing,
+  2008. WiCOM'08. 4th International Conference on. IEEE, 2008.
+
 \end{thebibliography}
