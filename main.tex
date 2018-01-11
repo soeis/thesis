@@ -28,7 +28,6 @@
 \setlength{\abovedisplayskip}{2.5mm}
 \setlength{\belowdisplayskip}{2.5mm}
 
-
 \usepackage{tabu}
 \usepackage{longtable}
 \usepackage{makecell}
@@ -74,7 +73,7 @@
 \positiontextbox{2.2cm}{2.9cm}{\wuhao http://www.bupt.edu.cn \quad  email@bupt.edu.cn\\[0.3cm]
 \wuhao DOI: \ 10.13700/j.bh.1001-5965.****.****}
 \begin{CAbstractJBUAA}
-不少于200字，应完整概括出文章的目的、方法、结果及结论；简洁，排除常识内容，避免重复题目；独立，不得引用文中参考文献号、图号和公式号；具体，尽量用具体数字来说明该项工作取得的进展或成效，例如某项性能指标提高了百分之多少，避免“效果很好”这类的含糊其辞；便于收录，摘要、题目中避免包含公式、上下标等，以方便EI等文摘和题录数据库收录文本数据。高质量的摘要有利于文摘被国际权威数据库收录，及引起同行的重视。用第3人称，建议采用“对……进行了研究”、“报告了……现状”、“进行了……调查”等记述方法，不必使用“本文”、“作者”等作为主语。缩写词应提供中文全称。
+本小组选取了kaggle中一道典型的图像分类题目，对数据进行简单预处理，利用迁移学习的思想，采用预训练的卷积神经网络(Convolutional Neural Network, CNN)提取图像的特征向量，使用前馈网络对特征向量进行分类，使用dropout技术防止过拟合，并在Xception模型的基础上引入了InceptionV3和InceptionResNetV2模型，最后采取加权平均的方式进行模型融合，排名能够达到top1\%。在解决问题的过程中，模型经历了多次迭代，数据处理和模型训练也采取了不同的技巧，文章对不同的方法和技巧做出了分析比较，说明了采用迁移学习和模型融合方法的优势。
 \end{CAbstractJBUAA}
 %%%%%%%%首页角注
 \positiontextbox{2.0cm}{25cm}{
@@ -99,7 +98,6 @@
 
 %%%%%！！！！！正文在第一页两栏分别合适位置插入 \enlargethispage{-3.3cm}，给首页跨双栏脚注留空间，大小需要结合前面位置和高度手动设置！！！！！
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
 由于卷积神经网络在机器视觉任务中的优秀表现，Kaggle竞赛中与图像相关的题目，绝大多数参赛者采用的是深度学习的解决方案。本小组选择了经典的图像分类任务，在问题的解决过程中，熟悉了一般CNN网络模型的构建方式，尝试运用一些数据挖掘的技巧，提升模型的表现，最终模型分类的准确率令人满意，也在一定程度上减少了模型训练的代价。挖掘任务的详细解决过程陈述如下。
 
 \section{任务描述}
@@ -114,12 +112,12 @@ Loss=-\frac 1 n\sum_{n}^{i=1}[y_ilog(\hat y_i)+(1-y_i)log(1-\hat y_i)]
 数据集分为训练集和测试集，jpg格式。训练集包括12500张猫的图片和12500张狗的图片，大小为543MB，分辨率不等，来自某个宠物领养的网站，推测为程序自动爬取获得，分类标签存在一定程度的错误。测试集包括12500张猫与狗的图片，大小为271MB，来源与训练集相同。
 
 \section{问题定义}
-赛题是一个典型的图像分类问题，即根据一定的分类规则将图像自动分到一组预定义类别中。图像分类在多领域有着广泛的实际应用。实际应用中，图像分类任务会受到视角的变化，大小的变化，物体的形变，遮挡，光照条件，\enlargethispage{-3.3cm}背景干扰和多种子类型等各方面因素\citeBUAA{cs231n}的挑战。
+赛题是一个典型的图像分类问题，即根据一定的分类规则将图像自动分到一组预定义类别中。图像分类在多领域有着广泛的实际应用。实际应用中，图像分类任务会受到视角的变化，大小的变化，物体的形变，遮挡，光照条件，\enlargethispage{-3.3cm}背景干扰和多种子类型等各方面因素\citeBUAA{cs231nClassify}的挑战。
 
 对于传统的数据挖掘算法，如K近邻算法(K-Nearest Neighbor, KNN)，支持向量机(Support Vector Machine, SVM)，图像分类任务是非常复杂甚至难以胜任的。卷积神经网络，以其在图像识别方面的优异表现，从诞生起就备受瞩目。因此，本小组选择CNN作为图像分类算法的核心部分，再利用迁移学习的思想，减少计算量和过拟合的风险。最终将数据挖掘任务划分为以下三个子任务：（1）图像数据的预处理；（2）数据特征的提取；（3）特征处理，对提取出的特征进行分类。
 
 \section{解决方案}
-经过多次实验和迭代，本小组最终提出了对图像仅进行简单预处理，以多个卷积神经网络作为特征提取器，训练前馈神经网络(Feedforward Neural Network, FNN)作为分类器，最后进行模型融合的解决方案。
+经过多次实验和迭代，本小组最终提出了对图像仅进行简单预处理，以多个卷积神经网络作为特征提取器\citeBUAA{cs231nTransfer}，训练前馈神经网络(Feedforward Neural Network, FNN)作为分类器，最后进行模型融合的解决方案。
 \subsection{方案提出}
 较深的卷积神经网络的训练和计算，需要相当大的计算能力。Google团队2016年提出的Xception模型，使用了60块Nvidia K80 GPUs，在ImageNet数据集上训练了3天\citeBUAA{Xception}，达到79\%的Top1准确率。小组最终采用的模型为Inception系列的三个深度均达到100层以上的CNN，而拥有的计算资源仅仅是笔记本上的入门级GPU GTX 1050m，这对计算资源提出了不小的挑战。
 
@@ -130,7 +128,7 @@ Loss=-\frac 1 n\sum_{n}^{i=1}[y_ilog(\hat y_i)+(1-y_i)log(1-\hat y_i)]
 \subsection{Inception系列网络}
 方案选取了在ImageNet数据集中，表现优秀的Inception系列网络，作为特征提取部分的模型。Inception系列网络是Google团队提出的一系列不断改进的CNN模型，名字来源于电影盗梦空间(Inception)中的一句台词：``We need to go deeper''。经典的CNN网络，由负责特征提取的卷积层和负责降采样的池化层交替堆叠而成。Inception系列网络在经典CNN结构的基础上，改进了卷积层的结构，取得了一定的性能提升。
 
-CNN中的卷积核大小，很大程度上影响着提取到的特征图像。一般来说，卷积核越大，感受野越大，越能发现全局的图像特征；卷积核越小，对图像局部的特征更加敏感。传统的CNN，每一层采用的是一组大小相同的卷积核。为了加强网络的泛化能力，对不同尺度的目标都能良好地识别，InceptionV1提出在同一层采用多种大小的卷积核，将卷积得到的特征向量进行拼接，作为下一层的输入。这就给下一层网络提供了不同尺度上的特征向量信息，使网络能够自由选择，提高了网络的泛化能力。
+CNN中的卷积核大小，很大程度上影响着提取到的特征图像。一般来说，卷积核越大，感受野越大，越能发现全局的图像特征；卷积核越小，对图像局部的特征更加敏感\citeBUAA{CNNSurvey}。传统的CNN，每一层采用的是一组大小相同的卷积核。为了加强网络的泛化能力，对不同尺度的目标都能良好地识别，InceptionV1提出在同一层采用多种大小的卷积核，将卷积得到的特征向量进行拼接，作为下一层的输入。这就给下一层网络提供了不同尺度上的特征向量信息，使网络能够自由选择，提高了网络的泛化能力。
 
 多个卷积核带来了性能的提升，也带来了极大的计算量。为了减少网络的计算，InceptionV1提出了1×1的卷积核。1×1的卷积核并不会改变特征图像在空间上的相对关系，而是把同一空间位置上的多个通道融合在一起，通过减少输出特征图像的通道数量，达到减少计算量的目的。
 
@@ -140,11 +138,38 @@ CNN中的卷积核大小，很大程度上影响着提取到的特征图像。�
 
 Xecption网络则在另一个角度上对传统CNN的结构作出了改进。区别于传统的卷积核，Xception网络使每一个卷积核仅仅进行一个通道的二位卷积操作，这就将空间上的相关性与通道之间的相关性分离开来。
 \subsection{迁移学习}
-迁移学习
+对于本分类任务而言，由于数据量较大，如果是直接在一个巨大的网络后面加全连接，那么每计算一次前向传播就需要20分钟以上，而且卷积层都是不可训练的，会造成计算资源的浪费，因此我们应用迁移学习(transfer learning)来降低计算开销\citeBUAA{TansferLearning}。下面对这个方法进行一下简单介绍：
 
+迁移学习，顾名思义是把B域中的知识迁移到A域中，以提高A域的分类效果。它作为一种新的学习范式，吸引了众多研究者的注意。对迁移学习的研究来源于一个观测：人类可以将以前的学到的知识应用于处理新的问题，以获得更好的效果。换句话说，迁移学习被赋予这样一个任务：从一个或多个源任务中抽取知识、经验，然后应用到一个新的目标领域当中，从而更快更好地解决问题。
+
+\begin{figure}[h!]
+\centering
+\includegraphics [scale=0.5,trim=0 0 0 0]{./image/training.png}
+\bicaption[labelFigtu4]{图}{\centering 训练过程}{Fig.}{\centering training process}
+\end{figure}
+
+基于迁移的内容，迁移学习可分为如下几类——基于实例的迁移学习：源领中的数据的某一部分可以通过调整权重的方法重用，用于目标域的学习；基于特征表示的迁移学习：通过源域学习一个好的特征表示，把知识通过特征的形式进行编码，并从源域传递到目标域，提升目标域任务效果；基于参数的迁移学习：目标域和源域的任务之间共享相同的模型参数或者是服从相同的先验分布；基于关系知识的迁移学习：假设源域和目标域中，数据之间联系关系是相同的，从而进行相关领域之间的知识迁移。
+
+\begin{figure}[h!]
+\centering
+\includegraphics [scale=0.35,trim=0 0 0 0]{./image/xception.png}
+\bicaption[labelFigtu5]{图}{\centering 迁移学习示例}{Fig.}{\centering example of transfer learning}
+\end{figure}
+
+这之中基于关系知识和参数的迁移学习适用于本项目分类任务，如图\ref{labelFigtu5}具体为固定预训练模型的前半部分网络参数，只训练CNN网络的后半部分，这样无论迭代次数为何，前半部分网络对相同的图像只需经过一次前向传播的计算，大大减少了训练时间。在提取出特征向量之后，仅需要对FNN分类器进行短时间的训练就可以达到良好的训练效果。如图\ref{labelFigtu4}所示，Xception网络提取出的特征向量，仅仅需要54s就能完成12epochs的迭代，并且在验证集上达到了99.63\%的准确率。
 \subsection{模型融合}
-模型融合
-
+集成学习(ensemble learning)通过构建并结合多个学习器来完成分类任务，其通过将多个学习器进行结合，常可获得比单一学习器显著优越的泛化性能\citeBUAA{MLBook}。在本项目中，提高模型表现的一种有效方法是综合各个不同的模型（学习器），从而兼听则明，得到更为出色的效果。学习器的结合策略包括平均法、投票法和学习法，本小组采用最常见的平均法来对不同模型的数值型输出进行融合。平均法中的加权平均法(weighted averaging)为：
+\begin{equation}
+\label{eqnLabel}
+H(x)=\sum_{i=1}^{T}\omega_{i}h_{i}(x)
+\end{equation}
+其中$\omega_{i}$是个体学习器$h_{i}$的权重，通常要求$\omega_{i}\geq0$且$\sum_{i=1}^{T}\omega_{i}=1$。而简单平均法是加权平均法令$\omega_{i}=1/T$的特例。加权平均法在集成学习中具有特别的意义，集成学习中的各种结合方法都可视为其特例或变体：对给定的基学习器，不同的集成学习方法均可等效为通过不同的方式来确定加权平均法中的基学习器权重。这里的权重来自于训练数据，可由正比于各训练模型的准确率或反比于差错率两种方式得到，本小组采用第一种方法来得到各模型的加权权重，实践证明，此种方式取得了较为满意的性能提升。
+\begin{figure}[h!]
+\centering
+\includegraphics [scale=0.3,trim=0 0 0 0]{./image/final.png}
+\bicaption[labelFigtu1]{图}{\centering 最终方案}{Fig.}{\centering final solutuon}
+\end{figure}
+小组最终采用的模型如图\ref{labelFigtu1}所示。
 \section{数据处理}
 \subsection{数据预处理}
 作为特征提取器的CNN网络需要299×299像素、RGB通道的图像输入。此外，为了加强神经网络的性能，防止过拟合，对图像进行一定程度的数据增强是相当有必要的。为此，需要先对数据做一些预处理工作。
@@ -154,6 +179,12 @@ Xecption网络则在另一个角度上对传统CNN的结构作出了改进。区
 此外，本小组还尝试了几种数据增强的方式：图像翻转，椒盐噪声，直方图均衡。
 
 图像的翻转、旋转是CNN图像处理中最常见的数据增强方式，简单高效，能够有效减少神经网络的过拟合风险。但随着数据量的增大，所需的计算量也随之增加。考虑到现实中（以及测试集中）猫狗图像一般不会有上下颠倒的情况，仅仅采取了水平翻转的方式，实际训练中，在验证集上取得了一定的准确率提升。
+
+\begin{figure}[h!]
+\centering
+\includegraphics [scale=0.8,trim=0 0 0 0]{./image/preprocess_train.png}
+\bicaption[labelFigtu2]{图}{\centering 预处理结果}{Fig.}{\centering result of preprocessing}
+\end{figure}
 
 添加椒盐噪声，是指按一定的信噪比随机在图片中添加纯白或纯黑像素点。小组尝试了0.8和0.9的信噪比，发现预测准确率均存在一定程度的下降。推测是椒盐噪声虽然增加了网络的鲁棒性，然而也破坏了图片中携带的信息，使得网络难以辨认图像，从而影响预测的结果。此外，CNN网络是固定不变的，椒盐噪声带来的鲁棒性提升很难被网络所利用。因此，此方案最后并未被采用。
 
@@ -171,222 +202,72 @@ ImageNet数据集包含至少1000类物体的图像，并且三种Inception网�
 
 通过迭代次数和网络参数的调节，可以有效地防止FNN出现过拟合，另外，采用验证集，结合early stopping技术，也可以使网络达到局部最优的训练结果。经过多次训练和调试，选择第一层1024个神经元，第二层512个神经元，$50\%$的Dropout比例为参数，$20\%$的数据划分为验证集，为每个网络分别构建FNN分类器，迭代次数根据CNN表达能力的强弱进行了相应调整，梯度下降算法是adam，可以自适应地改变学习率。
 
-除了为每个网络独立分配FNN分类器之外，小组也尝试了将三个网络提取出的特征向量直接拼接，再用同一个FNN分类器进行分类的方案，发现方案的效果不及模型融合，为了得到模型融合的优势，采用了多个分类器的方式。
+\begin{figure}[h!]
+\centering
+\includegraphics [scale=0.3,trim=0 0 0 0]{./image/concat3.png}
+\bicaption[labelFigtu3]{图}{\centering 合并特征向量的方案}{Fig.}{\centering solutuon of combining feature vectors}
+\end{figure}
+
+除了为每个网络独立分配FNN分类器之外，如图\ref{labelFigtu3}，小组也尝试了将三个网络提取出的特征向量直接拼接，再用同一个FNN分类器进行分类的方案，发现方案的效果不及模型融合，为了得到模型融合的优势，采用了多个分类器的方式。
 \subsection{模型融合}
 简单起见，小组采用的是加权求平均的方式，将三个网络的预测值，按照其在ImageNet数据集中的Top1准确率进行加权平均。相比仅仅拼接特征向量的方式，模型融合对预测结果有可观的提升。最终网络在本地验证集上的准确率，甚至可以达到$99.8\%$左右（不排除出现了过拟合现象）。
 
 \section{结果分析}
 \subsection{预测结果}
-以下是各个模型预测结果提交后的损失得分和最终排名（由于比赛已经结束，排名参考的是public leaderboard中的LogLoss值）。
-\subsection{误差分析}
-CNN在图像识别任务上有出色的表现，但是其运行机理更像是一个黑箱，经过多重网络的乘加等运算，很难定量分析误差的情况。为此，小组从预测结果出发，试图从一个更为直观的角度分析误差产生的原因。
-
-编写脚本，从预测结果中挑选出概率在$[0.2,0.8]$区间内的图像，共得到134张，通过手工筛查，发现图像有以下特征：
-
-1）错误样本：在训练集和测试集中，均存在无法进行分类的图像，如“Photo Unavailable”，纯色背景，
-\subsection{改进方案}
-改进方案
-
-\section{正文}
-\subsection{量、单位、公式}
-\subsubsection{公式编排}
-\label{labSecForm}
-《北京航空航天大学学报》一般不编排单独的符号表，对于公式中的变量含义需要说明的，请在公式后的段落中，采用“式中：$A$为某某；$B$为某某；……”的方式加以说明。
-\begin{equation}
-\label{eqnLabelp}
-p_1 (h) = \dfrac{n_{\textnormal{He}}RT}{V}-\rho_{\textnormal{He}}gh
-\end{equation}
-式中:$n_{\textnormal{He}}$ 和 $\rho_{\textnormal{He}}$ 分别为艇囊内部氦气的物质的量和氦气在温度 $T$ 时的平均密度；
-$V$=\SI{36893.426}{\cubic\meter}%%数字会小一些，默认的是公式字体大小
-为艇囊体积；$T$=\SI{216.65}{\kelvin}为艇囊内稳态温度；$h$为距离艇囊中心轴线($x$轴)的垂直高度.请使用Mathtype编辑。公式中字体的定义尺寸为10磅，上标/下标68\%，次下标/上标42\%，符号150\%，次符号100\%(设置方法：Mathtype-尺寸-定义)。长公式如需转行，应在记号=，+，$-$等之后断开，而在下一行开头不再重复这一记号。
-
-\subsubsection{量和单位}
-有关记号的使用应符合国家标准，例如：$\sin^{-1}$应为$\arcsin$，$\rm ctg$应为$\cot$，$\rm tg$应为$\tan$，不要使用非国家法定单位，如ppm等表示法已要求停止使用(rpm应写为r/min)；除$Re$, $Ma$（其中$e$, $a$不是下标）等几个特征数外，变量应使用单个字母表示，可以带上标和下标（否则由多个字母表示单个变量，易被误解为多个变量相乘）。
-
-\subsubsection{字体}
-矩阵、向量请用粗斜体表示，变量用一般斜体表示；下标字母若为说明性的(如英文缩写)则用正体表示，若为量和变动性数字及坐标轴的符号则用一般斜体表示(设置方法：Mathtype-样式-定义-高级)。
-
-所有文中出现的符号请另附文档说明其是变量、向量等，并说明各变量上下标的含义，以便编辑确定它们应采用的排版字体（变量符号说明表）。
-
-请作者对易于混淆的字母和数字，如数字0和字母o，英文a和希腊字母$\alpha$，O,P,S,C等的大小写，批注“英大”（代表英文大写）、“数字0”、“希小”（代表希腊字母小写）等。
-
-\subsection{图、表}
-图、表需给出中英文图题、表题(子图也需给出图题)，但图表中图例、线型说明等一律用中文。图表一般不超过7.7\ cm宽。金相图和计算机云图，其中的比例尺等字编辑过程中都不再重贴，按照照片处理，如有这两类图请保证美观清晰，字体用times new roman。
-
-\subsubsection{图片}
-对于函数曲线图，采用全框图，并注意检查以下各项：
-
-1）横纵坐标的标目（即变量名），尽量使用国标变量符号，变量名要在正文中交待，且与正文中符号一致；若正文中无，也可使用中文名称。
-
-2）坐标轴标目的量纲，对于无量纲化或无单位的，请注明“无单位”。
-
-3）坐标轴上的刻度线朝内，刻度值完整（坐标轴始末点均应有完整刻度值）。
-
-4）不同线型或图符是否有说明。
-
-5）是否矢量图格式，从软件中输出或拷贝矢量图格式直接插入文档中，避免用拷屏办法插图图片，否则后期无法编辑。
-
-6）类似图片尺寸尽量相同。
-
-《北航学报》自2014年起可提供彩版印刷，如有彩印需求请作者在“出版工作单”中注明。若不需彩印，请作者作图时注意用可区分的线形或符号区分不同曲线，以保证黑白图清晰可分辨。
-
-图中文字均用中文或变量名称表示！
-\begin{figure}[b!]
-\centering
-\includegraphics [scale=1,trim=0 0 0 0]{./image/tu1.png}
-\bicaption[labelFigtu1]{图}{\centering 电磁力峰值随线圈-铝板蒙皮间距和铝板蒙皮厚度变化曲线}{Fig.}{\centering Curves of electromagnetic force peak changing with coil-aluminum-plate gap and thickness of aluminum plate}
-\end{figure}
-
-图片样例见图\ref{labelFigtu1}和图\ref{labelFigtu2}（目前是位图格式，不能编辑，作者应提供可编辑的矢量图）。
-
-\begin{figure}[h!]
-\centering
-\includegraphics [scale=1,trim=0 0 0 0]{./image/tu2.png}
-\bicaption[labelFigtu2]{图}{\centering 谐振腔输入光强波动对谐振曲线的影响}{Fig.}{\centering Fluctuation influence of the resonator's input intensity on resonance curve}
-\end{figure}
-
-\subsubsection{表格}
-请使用三线表。选中表格，点右键打开“边框和底纹”，可对表格的边框等格式进行编辑，三线表的一般格式见表\ref{labelTabtab1}。
+表\ref{labelTabtab1}是各个模型预测结果提交后的损失得分和最终排名（由于比赛已经结束，排名参考的是public leaderboard中的LogLoss值）。
 \begin{table}[h]
 \centering
 \captionnamefont{\xiaowuhao\bf }
 \captiontitlefont{\xiaowuhao\bf }
-\bicaption[labelTabtab1]{表}{传输线积冰条件}{Table}{Icing conditions of transmission line}
+\bicaption[labelTabtab1]{表}{预测结果}{Table}{result of prediction}
 \renewcommand\tabcolsep{1em}
-% \xiaowuhao \selectfont
-% \renewcommand{\arraystretch}{0.8}
-% \fontsize{9}{11}\selectfont
 \begin{tabular}{cccc}
 \toprule
-{编号} &  {直径}/\si{\metre} & {静温}/\si{\kelvin} & {时间}/min\\
+{模型} &  {对数损失} & {排名}\\
 \midrule
-4 & 0.0349 & 268.15 & 30\\
-5 & 0.01905 & 268.15 & 30\\
+Xception+SVM & 0.05709 & 102\\
+Xception+FNN & 0.04475 & 28\\
+双模型+FNN & 0.04099 & 18\\
+三模型+FNN & 0.03941 & 15\\
+最终方案 & 0.03842 & 12\\
 \bottomrule
 \end{tabular}
 \end{table}
+分析不同模型之间的差距，可以简单地得到一些结论：
 
-\subsubsection{计算、实验}
-文章以数值计算为主要内容的，应给出所求解的方程、重要的计算参数、初始或边界条件、难点问题的处理等，应对方法的适用性和计算精度估计有所说明；文章以实验为主要内容的，应说明实验设备、实验条件，对实验误差的估计等。便于同行重复再现所报道的内容，由于保密原因不便公开某些内容的，应向责任编辑说明。
+1)SVM与FNN的差距，在于模型所采用的SVM是硬分类器，而FNN是软分类器，因此在分类出错时，SVM受到损失函数的惩罚会更严重；此外，FNN在表达能力和灵活性方面都要优于SVM分类器，样本数量较大时FNN也占优势；
 
-\section{参考文献}
-1) 引用文献应遵循“最新、关键、必要和亲自阅读过”的原则；
+2)表1第三和第四行中采用的模型，是用拼接特征向量的方式组合到一起的，也就是说，每增加一个模型，特征向量的维度都会增加2048，从而获得更全面的特征信息。然而，拼接的特征向量仍然是采用同一个FNN分类器进行训练的，难以回避过拟合的风险；
 
-2) 参考文献应是公开出版物；
+3)模型加权平均在多模型的基础上为每个CNN特征提取器训练不同的FNN分类器，降低了过拟合的风险，还可以对不同的FNN采取不同的训练策略，小组采用了12epochs、20epochs和12epochs的迭代次数分别对Xception，InceptionV3和InceptionResNetV2进行了训练，弥补了InceptionV3准确率不及另外两个网络的缺陷。
+\subsection{误差分析}
+CNN在图像识别任务上有出色的表现，但是其运行机理更像是一个黑箱，经过多重网络的乘加等运算，很难定量分析误差的情况。为此，小组从预测结果出发，试图从一个更为直观的角度分析误差产生的原因。
 
-3) 应在正文中顺次引述（按在正文中被提及的先后来排列各篇参考文献的序号，所有参考文献均应在正文中提及）；
-
-4) 文献条数15条以上，且有适量近两年文献；
-
-5) 参考文献中作者为3人或少于3人应全部列出，3人以上只列出前3人，后加“等”或“et al”；
-
-6) 参考文献中外国人名书写时一律姓前，名后，姓用全称大写，名缩写为首字母(大写)，不加缩写点；
-
-7) 为便于国际交流，对外文文献按外文著录；对于中文文献首先按中文著录，同时提供英文对照，并在其后注 “(in Chinese)” 注意对中文期刊刊名应使用其标准译法（通常在文章首页页眉可以找到）。
-
-具体样例详见文后参考文献部分。
-
-\begin{table}[h!]
+\begin{figure}[h!]
 \centering
-\captionnamefont{\xiaowuhao\bf }
-\captiontitlefont{\xiaowuhao\bf }
-\bicaption[labelTabtab2]{表}{文献类型和标志代码}{Table}{Referrence type and identification code}
-\liuhao
-\tabulinesep=1.2mm
-\begin{tabu} to 0.95\linewidth {X[c,m] X[1,c,m]|[1pt]X[1,c,m] X[1,c,m]}
-\tabucline[1pt]{-}
-{参考文献} &  {文献类型} & {参考文献} &  {文献类型} \\
-{类型} &  {标识} & {类型} &  {标识}\\ \hline
-   专著     &  M  & 学位论文  & D     \\
-   会议录    &  C  &  报告   &   R   \\
-   期刊     &  J  & 标准    &   S   \\
-   报纸     &  N  & 专利    &   P   \\
-   汇编     &  G  & 档案    &   A   \\
-   计算机程序 & CP  &电子公告  &   EB    \\
-   数据库    & DB &美图      &  CM   \\
-   数据集    & DS &其他      &    Z  \\ \tabucline[1pt]{-}
-\end{tabu}
-\end{table}
+\includegraphics [scale=0.8,trim=0 0 0 0]{./image/low_acc.png}
+\bicaption[labelFigtu6]{图}{\centering 准确率较低的预测集图像}{Fig.}{\centering images in test set with low accuracy}
+\end{figure}
 
-\begin{table}[h!]
-\centering
-\captionnamefont{\xiaowuhao\bf }
-\captiontitlefont{\xiaowuhao\bf }
-\bicaption[labelTabtab3]{表}{电子文献载体和标志代码}{Table}{Electronic literature and identification code}
-%\renewcommand\tabcolsep{2pt}
-\liuhao
-\tabulinesep=1.2mm
-\begin{tabu} to 0.98\linewidth {X[c,m] X[1,c,m] X[1,c,m] X[1.35,c,m] X[1.2,c,m]}
-\tabucline[1pt]{-}
-\makecell{载体\\ 类型} &  \makecell{磁带\\ （magnetic\\ tape）} & \makecell{磁盘\\ （disk）} & \makecell{光盘\\ （CD-ROM）} & \makecell{联机网络\\ （online）}\\
-\hline
-\makecell{标志\\ 代码} & MT & DK & CD & OL\\
-\tabucline[1pt]{-}
-\end{tabu}
-\end{table}
+编写脚本，从预测结果中挑选出概率在$[0.2,0.8]$区间内的图像，部分图像如图\ref{labelFigtu6}所示，共得到134张，通过手工筛查，发现图像有以下特征：
 
-\section{其他有关事项说明}
-1) 文章应着重撰写创新性、关键性内容，并以一般专业人员看得懂为原则
+1)错误样本：在训练集和测试集中，均存在无法进行分类的图像，如``Photo Unavailable''、纯色背景、猫狗在同一场景中，非猫狗物体等；2)目标过小：存在目标物体占图像整体比例少于10\%的情况，导致网络难以识别；3）分辨率低：部分测试集图像是由极低分辨率(如$[60,44]$)拉伸而成，与$[299,299]$的网络输入差别较大，无法准确预测；4)部分图片中的猫狗物体有非正常的拍摄角度，如上下倒置，这类角度在训练集中极少出现，导致网络难以预测这部分图片的分类情况。
+\subsection{改进方案}
+由于时间原因，模型及算法尚有改善空间，具体可在以下几个方面进行优化：
 
-2) 返回时间：修改稿一般应在10天内返回，或以责任编辑的要求为准。如作者不能按时返回，请向责任编辑说明情况
+1)使用其他预训练模型（如VGG）进行微调；2)网络调优，可以在已有数据的基础上训练网络的后几个卷积层甚至整个网络；3)使用异常检测\citeBUAA{AnomalyDetection}的方法检测出错误及非常规图像，而后单独标定；4)在得到的特征向量的基础上尝试聚类、随机森林等神经网络之外的数据挖掘方式……这些待完善的地方还会在后续进行探索。
 
-3) 返回文件（请从系统上传）:
+此外，针对误差分析中发现的情况，可以采用相应的数据增强方式（如上下倒置，随机放缩），来提升网络在测试集上的预测效果。
 
-\circled{\xiaowuhao 1} 论文电子版（修改部分用不同颜色标识）
-
-\circled{\xiaowuhao 2} 论文修改说明（写明对专家及编辑部所提意见如何修改）
-
-\circled{\xiaowuhao 3} 变量符号说明表（模板见下载园地）
-
-\circled{\xiaowuhao 4} 稿件出版工作单（word版，模板见下载园地）；“稿件出版工作单”中有关事项请认真填写，联系电话最好有手机。后期编辑及发行过程中，会根据作者填写的信息与作者联系解决稿件问题，联系方式及寄刊地址有变更的，请及时通知责任编辑
-
-稿件修改期间请对修改稿仔细审读、精加工，一经排版，一般不允许做大的改动
-
-4) 出版过程：责任编辑在编辑修改稿过程中常会有疑问请作者答复补正，请作者配合及时答复；稿件修改符合要求后，责任编辑将根据文章页码经电子信箱发送缴纳版面费通知单，作者应根据通知单要求及时缴纳版面费；编辑部有权对文章进行文字性修改，使之符合出版体例、规范要求和篇幅限制；责任编辑在编完稿件后，将其转至总编辑处，按来稿先后顺次发表；文章出版后，免费向作者提供样刊和抽印本，每篇文章1本样刊及5本抽印本，如作者需要可另购样刊，刊款可随版面费一并缴纳
-
-5) 提前发表：本刊一般发表周期为1年，作者若有特殊情况确实需要提前发表的，请提前向学术编辑联系及说明情况，编辑部可根据实际情况适当安排
-
-\section{结~~论}
-分点总结，列出具体结论，其他背景、方法都不必赘述。不与摘要和前言重复。具体样例如下：
-
-1) 算法可实现较为优异的检索性能，例如返回10张结果条件下算法检索正确率83.15\%，召回率8.42\%，在60张下正确率39.33\%，召回率24.61\%。
-
-2) 算法提出单张图片的引入不会造成原图片库的特征向量集和主题概率分配发生严重畸变的两个假设在一定范围（待检索图片与原图库特征类似）内是成立的。
-
-3) 算法的预备工作使检索范围由原先整个库缩小至某个子类中，虽使召回率有所损失，但检索时间得到较大的缩短。
-
-4) 可预估对于特征较接近的图片库，比如人脸库，图片预备工作会产生较大的分类误差，且可能进一步影响检索性能。
-
-为使本文提出的算法能处理各种类型的图片，仍需要优化预备工作和检索实现过程的各项参数。
-
-
-\section{\mycolorRed{模板中一些问题}}
-
-1) 所有\mycolorRed{间距}都是手动设置，可能与word模板有些差别。包括正文行间距、各级节标题前后行间距、文本字与字间距、页面设置（页边距）、双栏间距、公式前后间距、图表（标题）前后间距、页眉页脚间距等等
-
-2) \mycolorRed{字体}设置；正文中文、英文均是五号字（10.5pt），而公式中设置为10pt，所以公式中数字会小于普通文本数字，如$x=5$和5；带单位的量采用siunitx生成的话也有这个问题，如速度为\SI{5}{m/s}和5\ m/s。公式中上下标看起来与word版稍有差别；公式中$g$与word版\textit{g}也不同，默认公式字体可能并不是times new roman，本模板里未设置。
-
-3) \mycolorRed{双栏}设置，采用的是article模板twocolumn选项；multicol对浮动图表支持要差一些；twocolumn也有些问题，比如首页跨两栏的脚注，没找到更好的办法，这里使用了\textbackslash enlargethispage\{\}预留出脚注位置，然后用tikz手动调node的位置。还有跨两栏的图表灵活性稍差，\{figure*\}。
-
-4) 图表中英文题注，使用ccaption得到。公式中向量矩阵粗斜体可以使用\textbackslash bm得到。
-
-5) 参考文献，为了自动排序，引用方便，使用BibTex，但是参考文献格式不属于标准的，所以所有参考文献只使用misc这个entry，而且只用到misc中note这一个field，也就是把整条参考文献都放到note里了。工作量与word差不多，但是引用、增删排序更方便些。
-
-6) 变量符号说明表，里面加了一列符号所在位置，需要用到本文件生成的辅助文件，里面有可以引用的label信息。
-
-
-\vspace{1em}
-{\hei\wuhao 致谢\quad}
-{\fang\wuhao
-感谢某某……注意：首页注明基金项目后，文末不必再致谢。
-}
-
+% \vspace{1em}
+% {\hei\wuhao 致谢\quad}
+% {\fang\wuhao
+% }
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %  参考文献
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
 \renewcommand\refname{\hei\wuhao\centerline{参考文献（References）}\global\def\refname{参考文献}}
 \vskip 12pt
 
@@ -403,40 +284,6 @@ $V$=\SI{36893.426}{\cubic\meter}%%数字会小一些，默认的是公式字体�
 \bibliographystyle{unsrt}
 \bibliography{./main}
 }
-
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% 作者简历
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-{
-\xiaowuhao
-\noindent {\hei 作者简介:}
-
-\noindent {\hei 姓名}~~~ 性别，学历，职称。主要研究方向：xxxxxxxxxx。
-\vskip 16pt
-
-\noindent {\hei 张某某}~~~ 男，博士研究生。主要研究方向：xxxxxxxxxx。
-\vskip 16pt
-
-\noindent {\hei 李某某}~~~ 男，博士，教授，博士生导师。主要研究方向：xxxxxxxxxx。
-}
-
-%%%%%！！！！！需要在合适位置插入\newpage，来平衡最后一页两栏！！！！！
-% \newpage  %%% 用于平衡最后一页两栏高度
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% % % 附录
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\vskip 20pt
-
-\noindent {\hei 附录A:}
-
-若确有特殊需要设附录的,附录部分置于作
-者简介后,标题为“附录A:”、“附录B:”......。公式
-用大写字母和数字顺序编号,例如“(A1)”, “(A2)”。
-
-
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -459,12 +306,13 @@ $V$=\SI{36893.426}{\cubic\meter}%%数字会小一些，默认的是公式字体�
 \renewcommand{\headrule}{%
 \hrule height0.4pt width \headwidth \vskip1.0pt%
 \hrule height0.4pt width \headwidth \vskip-2pt}
+
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %          英文摘要
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
 \twocolumn[
- \begin{@twocolumnfalse}\vspace*{0.3cm}
+\begin{@twocolumnfalse}\vspace*{0.3cm}
 \begin{center}
 \parbox{\textwidth}{
 \setlength{\parindent}{1em}
@@ -479,13 +327,7 @@ $V$=\SI{36893.426}{\cubic\meter}%%数字会小一些，默认的是公式字体�
 \vspace{-10pt}\wuhao
 {
 \textbf{Abstract:}
-(与中文摘要内容对应，英文摘要字数150\textasciitilde 200个单词)英文摘要应和中文摘要对应，并请导师
-或专业人士把关，保证摘要质量，高质量的摘要有利于文摘被国际权威数据库收录，及引起同行的重视。
-如果英文摘要比中文摘要更详细，应另提供一份英文摘要的中文副本，以便于本刊英文编辑检查英文。
-首次出现英文缩写时应注意写明全称。
-
-英文摘要的撰写规范请参考本刊网站“下载园地”中的《Ei文摘要求》。
-
+The team selected a typical image classification problem in kaggle, firstly, preprocessing the data , then with the idea of transfer learning, extracted the feature vector of the image using pretrained convolutional neural network. Feedforward neural network is used for classification of the feature vector. What's more, InceptionV3 and InceptionResNetV2 are introduced on the basis of Xception. Finally, the three models are merged by weighted averaging, therefore our ranking can reach top 1\%. Through out the process of problem solving, the model has undergone many iterations, and a variety of methods are applied to data preprocessing. Different methods and techniques have been analyzed and compared, to illustrate the advantages of transfer learning and model ensembling.
 \textbf{Key words:} transfer learning; image classification; convolutional neural network; model ensembling
 }
 }
@@ -505,8 +347,8 @@ $V$=\SI{36893.426}{\cubic\meter}%%数字会小一些，默认的是公式字体�
  \end{@twocolumnfalse}
 ]
 
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %  英文摘要页 结束
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
 \end{document}

@@ -1,15 +1,35 @@
 \begin{thebibliography}{1}
 
-\bibitem{cs231n}
-http://cs231n.github.io/classification/.
+\bibitem{cs231nClassify}
+Image Classification. Retrieved January 1, 2018, from CS231n Convolutional
+  Neural Networks for Visual Recognition:
+  http://cs231n.github.io/classification/.
+
+\bibitem{cs231nTransfer}
+Transfer Learning. Retrieved January 1, 2018, from CS231n Convolutional Neural
+  Networks for Visual Recognition: http://cs231n.github.io/transfer-learning/.
 
 \bibitem{Xception}
 Chollet F. Xception: Deep Learning with Depthwise Separable Convolutions[J].
   arXiv preprint arXiv:1610.02357, 2016.
 
+\bibitem{CNNSurvey}
+周俊宇,赵艳明.卷积神经网络在图像分类和目标检测应用综述[J].计算机工程与应用,2017,53(13):34-41.
+
+\bibitem{TansferLearning}
+Pan, S. J. and Q. Yang. (2010). ``A survey of transfer learning.'' IEEE
+  Transactions on Knowledge and Data Engineering, 22(10):1345-1359.
+
+\bibitem{MLBook}
+周志华著，机器学习，清华大学出版社，2017.3.
+
 \bibitem{SVMorFNN}
-Yang, Shaomei, and Qian Zhu. "Research on comparison and application of SVM and
-  FNN Algorithm." Wireless Communications, Networking and Mobile Computing,
-  2008. WiCOM'08. 4th International Conference on. IEEE, 2008.
+Yang, Shaomei, and Qian Zhu. ``Research on comparison and application of SVM
+  and FNN Algorithm.'' Wireless Communications, Networking and Mobile
+  Computing, 2008. WiCOM'08. 4th International Conference on. IEEE, 2008.
+
+\bibitem{AnomalyDetection}
+Chandola, V., A. Banerjee, and V. Kumar. (2009). ``Anomaly detection: A
+  survey.'' ACM Computing Surveys，41(3): Article 15.
 
 \end{thebibliography}

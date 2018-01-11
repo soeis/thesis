@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99998 (TeX Live 2017/W32TeX) (preloaded format=xelatex 2017.12.25)  5 JAN 2018 12:08
+This is XeTeX, Version 3.14159265-2.6-0.99998 (TeX Live 2017/W32TeX) (preloaded format=xelatex 2017.12.25)  11 JAN 2018 15:34
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -2174,34 +2174,38 @@ Package: makecell 2009/08/03 V0.1e Managing of Tab Column Heads and Cells
 LaTeX Warning: Unused global option(s):
     [10.5pt].
 
-(./main.aux)
+(./main.aux
+
+LaTeX Warning: Label `eqnLabel' multiply defined.
+
+)
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 41.
-LaTeX Font Info:    ... okay on input line 41.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 41.
-LaTeX Font Info:    ... okay on input line 41.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 41.
-LaTeX Font Info:    ... okay on input line 41.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 41.
-LaTeX Font Info:    ... okay on input line 41.
-LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 41.
-LaTeX Font Info:    ... okay on input line 41.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 41.
-LaTeX Font Info:    ... okay on input line 41.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 41.
-LaTeX Font Info:    ... okay on input line 41.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 41.
-LaTeX Font Info:    ... okay on input line 41.
-LaTeX Font Info:    Checking defaults for T3/cmr/m/n on input line 41.
-LaTeX Font Info:    Try loading font information for T3+cmr on input line 41.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 40.
+LaTeX Font Info:    ... okay on input line 40.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 40.
+LaTeX Font Info:    ... okay on input line 40.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 40.
+LaTeX Font Info:    ... okay on input line 40.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 40.
+LaTeX Font Info:    ... okay on input line 40.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 40.
+LaTeX Font Info:    ... okay on input line 40.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 40.
+LaTeX Font Info:    ... okay on input line 40.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 40.
+LaTeX Font Info:    ... okay on input line 40.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 40.
+LaTeX Font Info:    ... okay on input line 40.
+LaTeX Font Info:    Checking defaults for T3/cmr/m/n on input line 40.
+LaTeX Font Info:    Try loading font information for T3+cmr on input line 40.
  (d:/texlive/2017/texmf-dist/tex/latex/tipa/t3cmr.fd
 File: t3cmr.fd 2001/12/31 TIPA font definitions
 )
-LaTeX Font Info:    ... okay on input line 41.
+LaTeX Font Info:    ... okay on input line 40.
 
 ABD: EverySelectfont initializing macros
-LaTeX Info: Redefining \selectfont on input line 41.
+LaTeX Info: Redefining \selectfont on input line 40.
 .................................................
 . fontspec info: "setup-math"
 . 
@@ -2209,63 +2213,63 @@ LaTeX Info: Redefining \selectfont on input line 41.
 .................................................
 \symlegacymaths=\mathgroup10
 LaTeX Font Info:    Overwriting symbol font `legacymaths' in version `bold'
-(Font)                  OT1/cmr/m/n --> OT1/cmr/bx/n on input line 41.
-LaTeX Font Info:    Redeclaring math accent \acute on input line 41.
-LaTeX Font Info:    Redeclaring math accent \grave on input line 41.
-LaTeX Font Info:    Redeclaring math accent \ddot on input line 41.
-LaTeX Font Info:    Redeclaring math accent \tilde on input line 41.
-LaTeX Font Info:    Redeclaring math accent \bar on input line 41.
-LaTeX Font Info:    Redeclaring math accent \breve on input line 41.
-LaTeX Font Info:    Redeclaring math accent \check on input line 41.
-LaTeX Font Info:    Redeclaring math accent \hat on input line 41.
-LaTeX Font Info:    Redeclaring math accent \dot on input line 41.
-LaTeX Font Info:    Redeclaring math accent \mathring on input line 41.
-LaTeX Font Info:    Redeclaring math symbol \Gamma on input line 41.
-LaTeX Font Info:    Redeclaring math symbol \Delta on input line 41.
-LaTeX Font Info:    Redeclaring math symbol \Theta on input line 41.
-LaTeX Font Info:    Redeclaring math symbol \Lambda on input line 41.
-LaTeX Font Info:    Redeclaring math symbol \Xi on input line 41.
-LaTeX Font Info:    Redeclaring math symbol \Pi on input line 41.
-LaTeX Font Info:    Redeclaring math symbol \Sigma on input line 41.
-LaTeX Font Info:    Redeclaring math symbol \Upsilon on input line 41.
-LaTeX Font Info:    Redeclaring math symbol \Phi on input line 41.
-LaTeX Font Info:    Redeclaring math symbol \Psi on input line 41.
-LaTeX Font Info:    Redeclaring math symbol \Omega on input line 41.
-LaTeX Font Info:    Redeclaring math symbol \mathdollar on input line 41.
-LaTeX Font Info:    Redeclaring symbol font `operators' on input line 41.
+(Font)                  OT1/cmr/m/n --> OT1/cmr/bx/n on input line 40.
+LaTeX Font Info:    Redeclaring math accent \acute on input line 40.
+LaTeX Font Info:    Redeclaring math accent \grave on input line 40.
+LaTeX Font Info:    Redeclaring math accent \ddot on input line 40.
+LaTeX Font Info:    Redeclaring math accent \tilde on input line 40.
+LaTeX Font Info:    Redeclaring math accent \bar on input line 40.
+LaTeX Font Info:    Redeclaring math accent \breve on input line 40.
+LaTeX Font Info:    Redeclaring math accent \check on input line 40.
+LaTeX Font Info:    Redeclaring math accent \hat on input line 40.
+LaTeX Font Info:    Redeclaring math accent \dot on input line 40.
+LaTeX Font Info:    Redeclaring math accent \mathring on input line 40.
+LaTeX Font Info:    Redeclaring math symbol \Gamma on input line 40.
+LaTeX Font Info:    Redeclaring math symbol \Delta on input line 40.
+LaTeX Font Info:    Redeclaring math symbol \Theta on input line 40.
+LaTeX Font Info:    Redeclaring math symbol \Lambda on input line 40.
+LaTeX Font Info:    Redeclaring math symbol \Xi on input line 40.
+LaTeX Font Info:    Redeclaring math symbol \Pi on input line 40.
+LaTeX Font Info:    Redeclaring math symbol \Sigma on input line 40.
+LaTeX Font Info:    Redeclaring math symbol \Upsilon on input line 40.
+LaTeX Font Info:    Redeclaring math symbol \Phi on input line 40.
+LaTeX Font Info:    Redeclaring math symbol \Psi on input line 40.
+LaTeX Font Info:    Redeclaring math symbol \Omega on input line 40.
+LaTeX Font Info:    Redeclaring math symbol \mathdollar on input line 40.
+LaTeX Font Info:    Redeclaring symbol font `operators' on input line 40.
 LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
-(Font)              `operators' in the math version `normal' on input line 41.
+(Font)              `operators' in the math version `normal' on input line 40.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
 (Font)                  OT1/cmr/m/n --> TU/TimesNewRoman(0)/m/n on input line 4
-1.
+0.
 LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
-(Font)              `operators' in the math version `bold' on input line 41.
+(Font)              `operators' in the math version `bold' on input line 40.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
 (Font)                  OT1/cmr/bx/n --> TU/TimesNewRoman(0)/m/n on input line 
-41.
+40.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
 (Font)                  TU/TimesNewRoman(0)/m/n --> TU/TimesNewRoman(0)/m/n on 
-input line 41.
+input line 40.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
 (Font)                  OT1/cmr/m/it --> TU/TimesNewRoman(0)/m/it on input line
- 41.
+ 40.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
 (Font)                  OT1/cmr/bx/n --> TU/TimesNewRoman(0)/bx/n on input line
- 41.
+ 40.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
-(Font)                  OT1/cmss/m/n --> TU/phv/m/n on input line 41.
+(Font)                  OT1/cmss/m/n --> TU/phv/m/n on input line 40.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
-(Font)                  OT1/cmtt/m/n --> TU/pcr/m/n on input line 41.
+(Font)                  OT1/cmtt/m/n --> TU/pcr/m/n on input line 40.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
 (Font)                  TU/TimesNewRoman(0)/m/n --> TU/TimesNewRoman(0)/bx/n on
- input line 41.
+ input line 40.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
 (Font)                  OT1/cmr/bx/it --> TU/TimesNewRoman(0)/bx/it on input li
-ne 41.
+ne 40.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
-(Font)                  OT1/cmss/bx/n --> TU/phv/bx/n on input line 41.
+(Font)                  OT1/cmss/bx/n --> TU/phv/bx/n on input line 40.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
-(Font)                  OT1/cmtt/m/n --> TU/pcr/bx/n on input line 41.
+(Font)                  OT1/cmtt/m/n --> TU/pcr/bx/n on input line 40.
 
 (d:/texlive/2017/texmf-dist/tex/latex/translator/translator-basic-dictionary-En
 glish.dict
@@ -2312,39 +2316,39 @@ ABD: EveryShipout initializing macros
 .................................................
 . LaTeX info: "xparse/redefine-command"
 . 
-. Redefining command \Pifont with sig. 'm' on line 41.
+. Redefining command \Pifont with sig. 'm' on line 40.
 .................................................
 \c__siunitx_mathsf_int=\count355
-LaTeX Font Info:    Try loading font information for U+msa on input line 41.
+LaTeX Font Info:    Try loading font information for U+msa on input line 40.
 (d:/texlive/2017/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 41.
+LaTeX Font Info:    Try loading font information for U+msb on input line 40.
 
 (d:/texlive/2017/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Try loading font information for U+wasy on input line 41.
+LaTeX Font Info:    Try loading font information for U+wasy on input line 40.
 
 (d:/texlive/2017/texmf-dist/tex/latex/wasysym/uwasy.fd
 File: uwasy.fd 2003/10/30 v2.0 Wasy-2 symbol font definitions
 )
 
 LaTeX Font Warning: Font shape `U/wasy/m/n' in size <10.53937> not available
-(Font)              size <10.95> substituted on input line 41.
+(Font)              size <10.95> substituted on input line 40.
 
-LaTeX Font Info:    Try loading font information for TU+phv on input line 41.
-LaTeX Font Info:    No file TUphv.fd. on input line 41.
+LaTeX Font Info:    Try loading font information for TU+phv on input line 40.
+LaTeX Font Info:    No file TUphv.fd. on input line 40.
 
 LaTeX Font Warning: Font shape `TU/phv/m/n' undefined
-(Font)              using `TU/lmr/m/n' instead on input line 41.
+(Font)              using `TU/lmr/m/n' instead on input line 40.
 
 \c__siunitx_mathtt_int=\count356
-LaTeX Font Info:    Try loading font information for TU+pcr on input line 41.
-LaTeX Font Info:    No file TUpcr.fd. on input line 41.
+LaTeX Font Info:    Try loading font information for TU+pcr on input line 40.
+LaTeX Font Info:    No file TUpcr.fd. on input line 40.
 
 LaTeX Font Warning: Font shape `TU/pcr/m/n' undefined
-(Font)              using `TU/lmr/m/n' instead on input line 41.
+(Font)              using `TU/lmr/m/n' instead on input line 40.
 
 \g__fontspec_family_SimHei_int=\count357
 .................................................
@@ -2403,31 +2407,34 @@ LaTeX Font Warning: Font shape `TU/pcr/m/n' undefined
 .................................................
 \somelength=\skip107
 
-Underfull \hbox (badness 10000) detected at line 90
+Underfull \hbox (badness 10000) detected at line 89
 \TU/SimHei(0)/m/n/10.5 摘 要
  []
 
 
-Underfull \hbox (badness 10000) detected at line 90
+Underfull \hbox (badness 10000) detected at line 89
 \TU/SimHei(0)/m/n/10.5 关 键 词
  []
 
 
 LaTeX Font Warning: Font shape `U/wasy/m/n' in size <4.2> not available
-(Font)              size <5> substituted on input line 90.
+(Font)              size <5> substituted on input line 89.
 
-LaTeX Font Info:    Calculating math sizes for size <7.875> on input line 90.
+LaTeX Font Info:    Calculating math sizes for size <7.875> on input line 89.
 
 LaTeX Font Warning: Font shape `U/wasy/m/n' in size <5.51247> not available
-(Font)              size <6> substituted on input line 90.
+(Font)              size <6> substituted on input line 89.
 
 
 LaTeX Font Warning: Font shape `U/wasy/m/n' in size <3.9375> not available
-(Font)              size <5> substituted on input line 90.
+(Font)              size <5> substituted on input line 89.
 
 
 LaTeX Font Warning: Font shape `TU/SimHei(0)/bx/n' undefined
-(Font)              using `TU/SimHei(0)/m/n' instead on input line 105.
+(Font)              using `TU/SimHei(0)/m/n' instead on input line 103.
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
@@ -2451,81 +2458,47 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [2]
-Underfull \vbox (badness 10000) has occurred while \output is active []
+File: ./image/training.png Graphic file (type bmp)
+<./image/training.png>
+
+Overfull \hbox (4.2324pt too wide) in paragraph at lines 147--148
+ [][] 
+ []
+
+File: ./image/xception.png Graphic file (type bmp)
+<./image/xception.png>
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+File: ./image/final.png Graphic file (type bmp)
+<./image/final.png>
+
+Overfull \hbox (40.04927pt too wide) in paragraph at lines 169--170
+ [][] 
+ []
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [3]
-\g__fontspec_family_KaiTi_int=\count359
-.................................................
-. fontspec info: "no-font-shape"
-. 
-. Could not resolve font "KaiTi/BI" (it probably doesn't exist).
-.................................................
-.................................................
-. fontspec info: "no-font-shape"
-. 
-. Could not resolve font "KaiTi/B" (it probably doesn't exist).
-.................................................
-.................................................
-. fontspec info: "no-font-shape"
-. 
-. Could not resolve font "KaiTi/I" (it probably doesn't exist).
-.................................................
-.................................................
-. fontspec info: "defining-font"
-. 
-. Font family 'KaiTi(0)' created for font 'KaiTi' with options [Script={CJK}].
-.  
-.  This font family consists of the following NFSS series/shapes:
-.  
-. - 'normal' (m/n) with NFSS spec.: <->"KaiTi/OT:script=hani;language=DFLT;"
-. - 'small caps'  (m/sc) with NFSS spec.: 
-.................................................
+File: ./image/preprocess_train.png Graphic file (type bmp)
+<./image/preprocess_train.png>
 
 
-LaTeX Font Warning: Font shape `TU/KaiTi(0)/bx/n' undefined
-(Font)              using `TU/KaiTi(0)/m/n' instead on input line 188.
-
-
-Underfull \hbox (badness 3679) in paragraph at lines 194--198
-\TU/SimSun(0)/m/n/10.5 式 中\TU/TimesNewRoman(0)/m/n/10.5 :$\OML/cmm/m/it/10 n[]$
- \TU/SimSun(0)/m/n/10.5 和 $\OML/cmm/m/it/10 ^^Z[]$ \TU/SimSun(0)/m/n/10.5 分 别 为
- 艇 囊 内 部 氦 气 的 物
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 194--198
-\TU/SimSun(0)/m/n/10.5 质 的 量 和 氦 气 在 温 度 $\OML/cmm/m/it/10 T$ \TU/SimSun(0)/m/n
-/10.5 时 的 平 均 密 度；|
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 194--198
-\OML/cmm/m/it/10 V$\TU/TimesNewRoman(0)/m/n/10.5 =[][]\TU/SimSun(0)/m/n/10.5 为 
-艇 囊 体 积；| $\OML/cmm/m/it/10 T$\TU/TimesNewRoman(0)/m/n/10.5 =[][]\TU/SimSun(0)/
-m/n/10.5 为
- []
+LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [4]
-File: ./image/tu1.png Graphic file (type bmp)
-<./image/tu1.png>
-File: ./image/tu2.png Graphic file (type bmp)
-<./image/tu2.png>
+File: ./image/concat3.png Graphic file (type bmp)
+<./image/concat3.png>
 
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-
-Overfull \hbox (3.89983pt too wide) in paragraph at lines 321--321
- [] 
+Overfull \hbox (42.45828pt too wide) in paragraph at lines 207--208
+ [][] 
  []
 
 
@@ -2535,38 +2508,61 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [5]
-Underfull \vbox (badness 10000) has occurred while \output is active []
+File: ./image/low_acc.png Graphic file (type bmp)
+<./image/low_acc.png>
 
- [6]
-(./main.bbl) [7
+Underfull \hbox (badness 1348) in paragraph at lines 252--253
+[]\TU/SimSun(0)/m/n/10.5 编 写 脚 本，|  从 预 测 结 果 中 挑 选 出 概 率 在
+ []
 
-]
+(./main.bbl
+Underfull \hbox (badness 10000) in paragraph at lines 4--7
+\TU/TimesNewRoman(0)/m/n/7.875 Convolutional Neural Networks for Visual Recogni
+tion:
+ []
+
+
+Underfull \hbox (badness 1389) in paragraph at lines 9--11
+[]\TU/TimesNewRoman(0)/m/n/7.875 Transfer Learning. Retrieved January 1, 2018, 
+from CS231n
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 9--11
+\TU/TimesNewRoman(0)/m/n/7.875 Convolutional Neural Networks for Visual Recogni
+tion:
+ []
+
+) [6]
 
 Package Fancyhdr Warning: \headheight is too small (28.45274pt): 
  Make it at least 44.0999pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[8
+[7
 
 
 
 ] (./main.aux)
 
 LaTeX Font Warning: Size substitutions with differences
-(Font)              up to 3.3pt have occurred.
+(Font)              up to 1.0625pt have occurred.
 
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
+
+LaTeX Warning: There were multiply-defined labels.
+
  ) 
 Here is how much of TeX's memory you used:
- 37407 strings out of 493010
- 799843 string characters out of 6138023
- 794171 words of memory out of 5000000
- 40751 multiletter control sequences out of 15000+600000
- 572332 words of font info for 257 fonts, out of 8000000 for 9000
+ 37077 strings out of 493010
+ 783321 string characters out of 6138023
+ 788221 words of memory out of 5000000
+ 40431 multiletter control sequences out of 15000+600000
+ 562436 words of font info for 209 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 63i,25n,70p,10428b,989s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 63i,12n,70p,10428b,814s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on main.pdf (8 pages).
+Output written on main.pdf (7 pages).
